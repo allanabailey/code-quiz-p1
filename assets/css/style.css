@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&display=swap');
+
+/* Main body styling */
+body {
+    background-color: white;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #170e1a;
+    text-align: center;
+}
+
+/* Header and Logo */
+.heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.logo {
+    height: 100px;
+    padding-right: 5px;
+}
+
+/* Game area styling */
+.game-area {
+    background-color: #170e1a;
+    width: 80%;
+    margin: 0 auto;
+    height: 60vh;
+    max-height: 450px;
+    color: white;
+    padding: 1%;
+    box-sizing: border-box;
+}
+
+.controls-area {
+    width: 80%;
+    margin: 10px auto;
+}
+
+.question-area {
+    width: 50%;
+    font-size: 2rem;
+    margin: auto;
+    padding: 50px 0;
+}
+
+.question-area span {
+    padding: 0 15px;
+}
+
+.score-area {
+    margin: 5px auto;
+    width: 60%;
+    font-size: 1.2rem;
+}
+
+.scores {
+    display: inline-block;
+    padding: 25px;
+}
+
+#score {
+    color: green;
+    font-weight: bold;
+}
+
+#incorrect {
+    color: red;
+    font-weight: bold;
+}
+
+.answer-message {
+    display: none;
+    font-size: 1rem;
+}
+
+#answer-box {
+    border: none;
+    color: #445361;
+    display: inline-block;
+    height: 40px;
+    width: 80px;
+    font-size: 1.2rem;
+}
