@@ -14,10 +14,63 @@
         <link rel="stylesheet" href="assets/css/style.css">
 
         <!-- Link to Google Fonts and Font Awesome -->
+        <script src="https://kit.fontawesome.com/460c94d067.js" crossorigin="anonymous"></script>
+
         <title>Coding Quiz</title>
     </head>
     <body>
-
+        <!-- Header with Logo, Title an NavBar -->
+        <header>
+            <a href="index.html">
+                <img src="" alt="" class="logo">
+            </a>
+            <nav class="menu">
+                <h1>Coding Quiz</h1>
+                <ul>
+                    <li class="active">
+                        <a href="index.html">Play</a>
+                    </li>
+                    <li>
+                        <a href="rules.html">Rules</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Main page content -->
+        <main>
+            <!-- Main game area -->
+            <div class="game-area">
+                <!-- Choice of Programming Language for Questions -->
+                <div class="controls-area">
+                    <button data-type="html" class="btn btn-big btn-green">
+                        <i class="fab fa-html5"></i>
+                    </button>
+                    <button data-type="css" class="btn btn-big btn-blue">
+                        <i class="fab fa-css3-alt"></i>
+                    </button>
+                    <button data-type="js" class="btn btn-big btn-orange">
+                        <i class="fab fa-js-square"></i>
+                    </button>
+                    <button data-type="sql" class="btn btn-big btn-red">
+                        <i class="fas fa-database"></i>
+                    </button>
+                </div>
+                <div class="question-area">
+                    <span id="question"></span>
+                    <p class="answer-message">Enter Answer:</p>
+                    <input id="answer-box" type="text">
+                </div>
+                <button data-type="submit" class="btn btn-gray">Submit Answer</button>
+            </div>
+        
+            <div class="score-area">
+                <p class="scores">Correct Answers <span id="score">0</span></p>
+                <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
+            </div>
+        </main>
         <script src="assets/js/script.js"></script>
     </body>
 </html>
