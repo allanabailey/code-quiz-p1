@@ -116,8 +116,15 @@ body {
 
 #submit-button {
     height: auto;
+    padding: 10px;
 }
 
+
+@media (max-width: 1000px) {
+    #submit-button {
+        width: 40%;
+    }
+}
 
 @media (max-width: 900px) {
     #question-container {
@@ -136,10 +143,6 @@ body {
 
     #scores {
         padding: 20px;
-    }
-
-    #submit-button {
-        width: 40%;
     }
 }
 
