@@ -30,6 +30,7 @@ function runQuiz() {
     displaySQLQuestion();
 }
 
+
 function displaySQLQuestion() {
 
 }
