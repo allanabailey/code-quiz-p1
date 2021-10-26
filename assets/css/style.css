@@ -34,14 +34,14 @@ body {
     box-sizing: border-box;
 }
 
-#question-area {
+#question-container {
     width: 50%;
     font-size: 2rem;
     margin: auto;
     padding: 50px 0;
 }
 
-#question-area span {
+#question-container span {
     padding: 0 15px;
 }
 
@@ -67,7 +67,6 @@ body {
 }
 
 #answer-message {
-    display: none;
     font-size: 1rem;
 }
 
