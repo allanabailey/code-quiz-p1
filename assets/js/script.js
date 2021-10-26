@@ -1,7 +1,6 @@
 const quizContainer = document.getElementById('quiz-container');
 const scoresResults = document.getElementById('score-area');
 const submitButton = document.getElementById('submit-button');
-submitButton.addEventListener("click", checkAnswer());
 
 const sqlQuestions = new Array (
     "What does the S in SQL stand for?",
@@ -39,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
             checkAnswer();
         }
     });
+    submitButton.addEventListener("click", checkAnswer());
     runQuiz();
 });
 
@@ -53,24 +53,28 @@ function runQuiz() {
     //Place the cursor in the answer box automatically.
     document.getElementById('answer-box').focus();
 
-    displaySQLQuestion();
+    //Randomly choose a question from the array
+    let qNumber = Math.floor(Math.random() * 10);
+    console.log(qNumber);
+    displaySQLQuestion(qNumber);
 }
 
 
-function displaySQLQuestion() {
+function displaySQLQuestion(qNumber) {
     let q = document.getElementById('question');
-    let qNumber = Math.floor(Math.random() * 10);
     q.textContent = sqlQuestions[qNumber];
 }
 
 function checkAnswer(qNumber) {
-    let userAnswer = document.getElementById('answer-box').value.trim().toUppercase();
-    let correctAnswer = sqlAnswers[qNumber].value;
+    let userAnswer = document.getElementById('answer-box').value.trim();
+    let correctAnswer = sqlAnswers[qNumber];
     if(userAnswer === correctAnswer) {
         alert("yay!");
     } else {
         alert("NO!");
     }
+
+    runQuiz();
 }
 
 function addScore() {
