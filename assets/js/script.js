@@ -67,7 +67,7 @@ function displaySQLQuestion(qNumber) {
 }
 
 function checkAnswer() {
-    let userAnswer = document.getElementById('answer-box').value.trim();
+    let userAnswer = document.getElementById('answer-box').value.trim().toUpperCase();
     let correctAnswer = sqlAnswers[document.getElementById('qNumber').innerHTML];
     console.log(correctAnswer);
     if(userAnswer === correctAnswer) {
