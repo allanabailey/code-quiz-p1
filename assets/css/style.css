@@ -27,7 +27,7 @@ body {
     background-color: #170e1a;
     width: 80%;
     margin: 0 auto;
-    height: 60vh;
+    height: 80vh;
     max-height: 450px;
     color: white;
     padding: 1%;
@@ -35,10 +35,11 @@ body {
 }
 
 #question-container {
-    width: 50%;
+    width: 70%;
     font-size: 2rem;
     margin: auto;
     padding: 50px 0;
+    box-sizing: border-box;
 }
 
 #question-container span {
@@ -47,13 +48,13 @@ body {
 
 #score-area {
     margin: 5px auto;
-    width: 60%;
+    width: 80%;
     font-size: 1.2rem;
 }
 
 #scores {
     display: inline-block;
-    padding: 25px;
+    padding: 50px;
 }
 
 #correct {
@@ -67,18 +68,39 @@ body {
 }
 
 #answer-message {
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
 #answer-box {
     border: none;
     color: #445361;
     display: inline-block;
-    height: 40px;
-    width: 80px;
+    height: 80px;
+    width: 400px;
     font-size: 1.2rem;
 }
 
 #qNumber {
     display: none;
+}
+
+
+@media (max-width: 750px) {
+    #question-container {
+        font-size: 1.1rem;
+    }
+
+    #answer-message {
+        font-size: 1.1rem;
+    }
+
+    #answer-box {
+        height: 30px;
+        width: 200px;
+        font-size: 1.2rem;
+    }
+
+    #scores {
+        padding: 20px;
+    }
 }
