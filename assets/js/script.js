@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
             checkAnswer();
         }
     });
-    submitButton.addEventListener("click", checkAnswer());
+    submitButton.addEventListener("click", checkAnswer);
     runQuiz();
 });
 
@@ -55,19 +55,21 @@ function runQuiz() {
 
     //Randomly choose a question from the array
     let qNumber = Math.floor(Math.random() * 10);
-    console.log(qNumber);
+    let qDiv = document.getElementById('qNumber');
+    qDiv.textContent = qNumber;
     displaySQLQuestion(qNumber);
 }
 
 
 function displaySQLQuestion(qNumber) {
     let q = document.getElementById('question');
-    q.textContent = sqlQuestions[qNumber];
+    q.innerHTML = sqlQuestions[qNumber];
 }
 
-function checkAnswer(qNumber) {
+function checkAnswer() {
     let userAnswer = document.getElementById('answer-box').value.trim();
-    let correctAnswer = sqlAnswers[qNumber];
+    let correctAnswer = sqlAnswers[document.getElementById('qNumber').innerHTML];
+    console.log(correctAnswer);
     if(userAnswer === correctAnswer) {
         alert("yay!");
     } else {
