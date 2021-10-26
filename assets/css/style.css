@@ -56,7 +56,7 @@ body {
     padding: 25px;
 }
 
-#score {
+#correct {
     color: green;
     font-weight: bold;
 }

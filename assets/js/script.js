@@ -31,14 +31,14 @@ const sqlAnswers = new Array (
 
 // Wait for the DOM to completely finish loading
 // before running the game
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
     //Allow the user to click enter to submit their answer.
     document.getElementById('answer-box').addEventListener('keydown', function(event) {
         if(event.key === 'Enter') {
             checkAnswer();
         }
     });
-    submitButton.addEventListener("click", checkAnswer);
+    submitButton.addEventListener('click', checkAnswer);
     runQuiz();
 });
 
@@ -72,17 +72,25 @@ function checkAnswer() {
     console.log(correctAnswer);
     if(userAnswer === correctAnswer) {
         alert("yay!");
+        addScore();
     } else {
         alert("NO!");
+        addWrong();
     }
 
     runQuiz();
 }
 
 function addScore() {
-
+    let currentScore = parseInt(document.getElementById('correct').innerText);
+    document.getElementById('correct').innerText = ++currentScore;
+    if(currentScore == 10) {
+        alert('Congratulations you have reached 10 points!');
+        quizContainer.style.backgroundColor = 'green';
+    }
 }
 
 function addWrong() {
-
+    let currentWrong = parseInt(document.getElementById('incorrect').innerText);
+    document.getElementById('incorrect').innerText = ++currentWrong;
 }
