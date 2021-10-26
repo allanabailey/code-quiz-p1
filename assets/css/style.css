@@ -23,7 +23,7 @@ body {
 }
 
 /* Game area styling */
-.game-area {
+#quiz-container {
     background-color: #170e1a;
     width: 80%;
     margin: 0 auto;
@@ -34,29 +34,24 @@ body {
     box-sizing: border-box;
 }
 
-.controls-area {
-    width: 80%;
-    margin: 10px auto;
-}
-
-.question-area {
+#question-area {
     width: 50%;
     font-size: 2rem;
     margin: auto;
     padding: 50px 0;
 }
 
-.question-area span {
+#question-area span {
     padding: 0 15px;
 }
 
-.score-area {
+#score-area {
     margin: 5px auto;
     width: 60%;
     font-size: 1.2rem;
 }
 
-.scores {
+#scores {
     display: inline-block;
     padding: 25px;
 }
@@ -71,7 +66,7 @@ body {
     font-weight: bold;
 }
 
-.answer-message {
+#answer-message {
     display: none;
     font-size: 1rem;
 }

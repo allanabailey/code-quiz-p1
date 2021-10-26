@@ -29,33 +29,18 @@
         <!-- Main page content -->
         <main>
             <!-- Main game area -->
-            <div class="game-area">
-                <!-- Choice of Programming Language for Questions -->
-                <div class="controls-area">
-                    <button data-type="html" class="btn btn-big btn-green">
-                        <i class="fab fa-html5"></i>
-                    </button>
-                    <button data-type="css" class="btn btn-big btn-blue">
-                        <i class="fab fa-css3-alt"></i>
-                    </button>
-                    <button data-type="js" class="btn btn-big btn-orange">
-                        <i class="fab fa-js-square"></i>
-                    </button>
-                    <button data-type="sql" class="btn btn-big btn-red">
-                        <i class="fas fa-database"></i>
-                    </button>
-                </div>
-                <div class="question-area">
+            <div id="quiz-container">
+                <div id="question-container">
                     <span id="question"></span>
-                    <p class="answer-message">Enter Answer:</p>
+                    <p id="answer-message">Enter Answer:</p>
                     <input id="answer-box" type="text">
                 </div>
-                <button data-type="submit" class="btn btn-gray">Submit Answer</button>
+                <button id="submit-button" class="btn btn-gray">Submit Answer</button>
             </div>
         
-            <div class="score-area">
-                <p class="scores">Correct Answers <span id="score">0</span></p>
-                <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
+            <div id="score-area">
+                <p id="scores">Correct Answers <span id="score">0</span></p>
+                <p id="scores">Incorrect Answers <span id="incorrect">0</span></p>
             </div>
         </main>
         <script src="assets/js/script.js"></script>
