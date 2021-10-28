@@ -45,13 +45,13 @@ body {
     font-size: 1.5rem;
     border: 2px solid #170e1a;
     border-radius: 4px;
-    transition: 0.8s;
 }
 
 .btn:hover {
     background-color: #170e1a;
     color: #da4167;
     border: 2px solid #da4167;
+    transition: 0.8s;
 }
 
 #quiz-container {
@@ -110,14 +110,14 @@ body {
 }
 
 #answer-message {
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 #answer-box {
     border: none;
     color: #445361;
     display: inline-block;
-    height: 80px;
+    height: 60px;
     width: 400px;
     font-size: 1.2rem;
 }
@@ -140,7 +140,7 @@ body {
 
 @media (max-width: 900px) {
     #question-container {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
 
     #answer-message {
