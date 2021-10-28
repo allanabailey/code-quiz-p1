@@ -2,32 +2,48 @@ const quizContainer = document.getElementById('quiz-container');
 const scoresResults = document.getElementById('score-area');
 const submitButton = document.getElementById('submit-button');
 
-const sqlQuestions = new Array (
-    "What does the S in SQL stand for?",
-    "What is the keyword used to select unique/different values?",
-    "Does ORDER BY default to ASC or DESC when not specified?",
-    "What is the wildcard used to select all columns from a table?",
-    "What is the keyword used to specify the range of values something can be in?",
-    "True or False: TRUNCATE TABLE deletes the whole table.",
-    "What is the keyword used to filter records through meeting a certain condition in a SELECT statement?",
-    "What is the keyword used to search for a particular pattern in a WHERE clause?",
-    "What key word must go at the end of a CASE statement?",
-    "True or False: DROP TABLE only deletes the data in the table, not the table itself."
-);
-
-const sqlAnswers = new Array (
-    "STRUCTURED",
-    "DISTINCT",
-    "ASC",
-    "*",
-    "BETWEEN",
-    "FALSE",
-    "WHERE",
-    "LIKE",
-    "END",
-    "FALSE"
-);
-
+const sqlQuestions = [
+    {
+      question: "What does the S in SQL stand for?",
+      answer: "STRUCTURED"
+    },
+    {
+      question: "What is the keyword used to select unique/different values?",
+      answer: "DISTINCT"
+    },
+    {
+      question: "Does ORDER BY default to ASC or DESC when not specified?",
+      answer: "ASC"
+    },
+    {
+      question: "What is the wildcard used to select all columns from a table?",
+      answer: "*"
+    }, 
+    {
+      question: "What is the keyword used to specify the range of values something can be in?",
+      answer: "BETWEEN"
+    },  
+    {
+      question: "True or False: TRUNCATE TABLE deletes the whole table.",
+      answer: "FALSE"
+    }, 
+    {
+      question: "What is the keyword used to filter records through meeting a certain condition in a SELECT statement?",
+      answer: "WHERE"
+    },
+    {
+      question: "What is the keyword used to search for a particular pattern in a WHERE clause?",
+      answer: "LIKE"
+    },
+    {
+      question: "What key word must go at the end of a CASE statement?",
+      answer: "END"
+    },
+    {
+      question: "True or False: DROP TABLE only deletes the data in the table, not the table itself.",
+      answer: "FALSE"
+    }
+];
 
 
 // Wait for the DOM to completely finish loading
@@ -61,7 +77,7 @@ function runQuiz() {
         finishMsg.textContent = "Congratulations you have finished the quiz! Refresh for more!";
     } else {
         let qDiv = document.getElementById('qNumber');
-        qDiv.textContent = qNumber;
+        qDiv.textContent = sqlQuestions[qNumber].answer;
         console.log(sqlQuestions);
         displaySQLQuestion(qNumber);
         sqlQuestions.splice(qNumber, 1);
@@ -81,12 +97,12 @@ function generateNewQNum() {
 
 function displaySQLQuestion(qNumber) {
     let q = document.getElementById('question');
-    q.innerHTML = sqlQuestions[qNumber];
+    q.innerHTML = sqlQuestions[qNumber].question;
 }
 
 function checkAnswer() {
     let userAnswer = document.getElementById('answer-box').value.trim().toUpperCase();
-    let correctAnswer = sqlAnswers[document.getElementById('qNumber').innerHTML];
+    let correctAnswer = document.getElementById('qNumber').innerHTML;
     if(userAnswer === correctAnswer) {
         alert("yay!");
         addScore();
@@ -94,7 +110,6 @@ function checkAnswer() {
         alert("NO!");
         addWrong();
     }
-
     runQuiz();
 }
 
