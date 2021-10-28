@@ -10,7 +10,7 @@ const sqlQuestions = new Array (
     "What is the keyword used to specify the range of values something can be in?",
     "True or False: TRUNCATE TABLE deletes the whole table.",
     "What is the keyword used to filter records through meeting a certain condition in a SELECT statement?",
-    "What is the keyword used to search for a particular patter in a WHERE clause?",
+    "What is the keyword used to search for a particular pattern in a WHERE clause?",
     "What key word must go at the end of a CASE statement?",
     "True or False: DROP TABLE only deletes the data in the table, not the table itself."
 );
@@ -27,6 +27,7 @@ const sqlAnswers = new Array (
     "END",
     "FALSE"
 );
+
 
 
 // Wait for the DOM to completely finish loading
@@ -54,10 +55,27 @@ function runQuiz() {
     document.getElementById('answer-box').focus();
 
     //Randomly choose a question from the array
-    let qNumber = Math.floor(Math.random() * 10);
-    let qDiv = document.getElementById('qNumber');
-    qDiv.textContent = qNumber;
-    displaySQLQuestion(qNumber);
+    let qNumber = Math.floor(Math.random() * sqlQuestions.length);
+    if(sqlQuestions.length === 0) {
+        let finishMsg = document.getElementById('question');
+        finishMsg.textContent = "Congratulations you have finished the quiz! Refresh for more!";
+    } else {
+        let qDiv = document.getElementById('qNumber');
+        qDiv.textContent = qNumber;
+        console.log(sqlQuestions);
+        displaySQLQuestion(qNumber);
+        sqlQuestions.splice(qNumber, 1);
+    }
+}
+
+
+function generateNewQNum() {
+    let newQNumber = Math.floor(Math.random() * 10);
+    if(qNumbersUsed.includes(newQNumber)) {
+        generateNewQNum();
+    } else {
+        return newQNumber;
+    }
 }
 
 
@@ -69,7 +87,6 @@ function displaySQLQuestion(qNumber) {
 function checkAnswer() {
     let userAnswer = document.getElementById('answer-box').value.trim().toUpperCase();
     let correctAnswer = sqlAnswers[document.getElementById('qNumber').innerHTML];
-    console.log(correctAnswer);
     if(userAnswer === correctAnswer) {
         alert("yay!");
         addScore();
