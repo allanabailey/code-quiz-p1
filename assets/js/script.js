@@ -2,6 +2,9 @@ const quizContainer = document.getElementById('quiz-container');
 const scoresResults = document.getElementById('score-area');
 const submitButton = document.getElementById('submit-button');
 
+const correct = new Audio('assets/audio/correct.mp3');
+const incorrect = new Audio('assets/audio/incorrect.mp3');
+
 const sqlQuestions = [
     {
       question: "What does the S in SQL stand for?",
@@ -104,10 +107,10 @@ function checkAnswer() {
     let userAnswer = document.getElementById('answer-box').value.trim().toUpperCase();
     let correctAnswer = document.getElementById('qNumber').innerHTML;
     if(userAnswer === correctAnswer) {
-        alert("yay!");
+        correct.play();
         addScore();
     } else {
-        alert("NO!");
+        incorrect.play();
         addWrong();
     }
     runQuiz();
