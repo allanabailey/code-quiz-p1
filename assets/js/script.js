@@ -77,7 +77,7 @@ function runQuiz() {
     let qNumber = Math.floor(Math.random() * sqlQuestions.length);
     if(sqlQuestions.length === 0) {
         let finishMsg = document.getElementById('question');
-        finishMsg.textContent = "Congratulations you have finished the quiz! Refresh for more!";
+        finishMsg.textContent = "Quiz complete! Refresh the page to try again!";
         document.getElementById('answer-message').style.display = 'none';
         document.getElementById('answer-box').style.display = 'none';
         document.getElementById('submit-button').style.display = 'none';
