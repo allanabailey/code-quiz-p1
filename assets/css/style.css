@@ -8,7 +8,7 @@ body {
     text-align: center;
 }
 
-/* Header and Logo */
+/* Header, Logo and Section Divides */
 .heading {
     width: 100%;
     display: flex;
@@ -20,6 +20,11 @@ body {
 .logo {
     height: 100px;
     padding-right: 5px;
+}
+
+hr {
+    border-bottom: 2px solid #170e1a;
+    width: 60%;
 }
 
 /* Game area styling */
@@ -54,6 +59,11 @@ body {
     transition: 0.8s;
 }
 
+#submit-button {
+    height: auto;
+    padding: 10px;
+}
+
 #quiz-container {
     background-color: #170e1a;
     width: 80%;
@@ -77,6 +87,8 @@ body {
     padding: 0 15px;
 }
 
+
+/* Score Area */
 #score-area {
     margin: 5px auto;
     width: 80%;
@@ -109,6 +121,8 @@ body {
     font-weight: bold;
 }
 
+
+/* Answer area with User Input */
 #answer-message {
     font-size: 1rem;
 }
@@ -126,18 +140,14 @@ body {
     display: none;
 }
 
-#submit-button {
-    height: auto;
-    padding: 10px;
-}
-
-
+/* Media Query for Screens of 1000px or less */
 @media (max-width: 1000px) {
     #submit-button {
         width: 40%;
     }
 }
 
+/* Media Query for Screens of 900px or less */
 @media (max-width: 900px) {
     #question-container {
         font-size: 1.3rem;
@@ -158,6 +168,7 @@ body {
     }
 }
 
+/* Media Query for Screens of 700px or less */
 @media (max-width: 700px) {
     .btn {
         width: 50%;

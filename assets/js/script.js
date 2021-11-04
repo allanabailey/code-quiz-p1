@@ -2,9 +2,11 @@ const quizContainer = document.getElementById('quiz-container');
 const scoresResults = document.getElementById('score-area');
 const submitButton = document.getElementById('submit-button');
 
+//Audio files to play on getting an answer correct / incorrect.
 const correct = new Audio('assets/audio/correct.mp3');
 const incorrect = new Audio('assets/audio/incorrect.mp3');
 
+//SQL Question and Answer array
 const sqlQuestions = [
     {
       question: "What does the S in SQL stand for?",
@@ -75,6 +77,9 @@ function runQuiz() {
 
     //Randomly choose a question from the array
     let qNumber = Math.floor(Math.random() * sqlQuestions.length);
+
+    //Check if the user has completed the quiz and display a congratulations message
+    //and clear the quiz area if so.
     if(sqlQuestions.length === 0) {
         let finishMsg = document.getElementById('question');
         finishMsg.textContent = "Quiz complete! Refresh the page to try again!";
@@ -91,22 +96,25 @@ function runQuiz() {
 }
 
 
-function generateNewQNum() {
-    let newQNumber = Math.floor(Math.random() * 10);
-    if(qNumbersUsed.includes(newQNumber)) {
-        generateNewQNum();
-    } else {
-        return newQNumber;
-    }
-}
-
-
+/**
+ * Function that displays the next SQL question in the quiz area
+ * by taking qNumber as a parameter and displaying the question
+ * in that index of the array.
+ * @param {*} qNumber 
+ */
 function displaySQLQuestion(qNumber) {
     let q = document.getElementById('question');
     q.innerHTML = sqlQuestions[qNumber].question;
 }
 
+
+/**
+ * Function that checks the user's inputted answer against the correct answer
+ * stored in the array ignoring case and leading/trailing white spaces.
+ */
 function checkAnswer() {
+
+    //Ignore any leading/trailing white spaces and the case of the user's input.
     let userAnswer = document.getElementById('answer-box').value.trim().toUpperCase();
     let correctAnswer = document.getElementById('qNumber').innerHTML;
     if(userAnswer === correctAnswer) {
@@ -119,15 +127,26 @@ function checkAnswer() {
     runQuiz();
 }
 
+
+/**
+ * Function to increment the users score on getting an answer correct.
+ */
 function addScore() {
     let currentScore = parseInt(document.getElementById('correct').innerText);
     document.getElementById('correct').innerText = ++currentScore;
+
+    //If the user has answered 10 questions correctly, turn the background color to green
+    //and display a congratulations message in an alert box.
     if(currentScore == 10) {
         alert('Congratulations you have reached 10 points!');
         quizContainer.style.backgroundColor = 'green';
     }
 }
 
+
+/**
+ * Function to increment the 'incorrect' score if the user gets an answer wrong.
+ */
 function addWrong() {
     let currentWrong = parseInt(document.getElementById('incorrect').innerText);
     document.getElementById('incorrect').innerText = ++currentWrong;
