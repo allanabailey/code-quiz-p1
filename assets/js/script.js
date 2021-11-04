@@ -54,14 +54,27 @@ const sqlQuestions = [
 // Wait for the DOM to completely finish loading
 // before running the game
 document.addEventListener('DOMContentLoaded', function() {
+    let buttons = document.getElementsByTagName('button');
+
     //Allow the user to click enter to submit their answer.
     document.getElementById('answer-box').addEventListener('keydown', function(event) {
         if(event.key === 'Enter') {
             checkAnswer();
         }
     });
+
+    for (button of buttons) {
+      button.addEventListener("click", function() {
+        if (this.getAttribute("data-type") === "submit") {
+            checkAnswer();
+        } else {
+            let codingLang = this.getAttribute("data-type");
+            runQuiz(codingLang);
+        }
+    });
+    }
     submitButton.addEventListener('click', checkAnswer);
-    runQuiz();
+    runQuiz("sql");
 });
 
 
@@ -69,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
  * Main function that runs the game and calls the other
  * functions to display one of the questions
  */
-function runQuiz() {
+function runQuiz(codingLang) {
     //Clears input for user each time a new question is loaded.
     document.getElementById('answer-box').value = '';
     //Place the cursor in the answer box automatically.
