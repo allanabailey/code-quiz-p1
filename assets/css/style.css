@@ -140,6 +140,21 @@ hr {
     display: none;
 }
 
+
+/* Rules Area */
+#rules-container {
+    width: 80%;
+    height: 100vh;
+    max-height: 450px;
+    box-sizing: border-box;
+    border: solid 5px #170e1a;
+    padding: 1px;
+    margin: 5px auto;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+}
+
 /* Media Query for Screens of 1000px or less */
 @media (max-width: 1000px) {
     #submit-button {
