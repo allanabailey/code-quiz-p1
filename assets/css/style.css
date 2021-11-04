@@ -30,6 +30,7 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
+    padding: 10px;
 }
 
 #social li {
@@ -41,7 +42,7 @@ footer {
 #social i {
     color: white;
     font-size: 2rem;
-    padding: 5px;
+    padding: 20px;
 }
 
 
