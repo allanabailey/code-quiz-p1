@@ -151,8 +151,11 @@ hr {
     padding: 1px;
     margin: 5px auto;
     font-size: 1.2rem;
-    display: flex;
-    justify-content: center;
+}
+
+#rules {
+    text-align: left;
+    padding: 5px;
 }
 
 /* Media Query for Screens of 1000px or less */
