@@ -131,28 +131,6 @@ function runQuiz(codingLang) {
     //Place the cursor in the answer box automatically.
     document.getElementById('answer-box').focus();
 
-    //Randomly choose a question from the array
-    /*if(codingLang === "sql") {
-        let qNumber = Math.floor(Math.random() * sqlQuestions.length);
-        qDiv.textContent = sqlQuestions[qNumber].answer;
-        displaySQLQuestion(qNumber);
-        sqlQuestions.splice(qNumber, 1);
-    } else if (codingLang === "html") {
-        let qNumber = Math.floor(Math.random() * htmlQuestions.length);
-        qDiv.textContent = htmlQuestions[qNumber].answer;
-        displayHTMLQuestion(qNumber);
-        htmlQuestions.splice(qNumber, 1);
-    } else if (codingLang === "css") {
-        let qNumber = Math.floor(Math.random() * cssQuestions.length);
-        qDiv.textContent = cssQuestions[qNumber].answer;
-        displayCSSQuestion(qNumber);
-        cssQuestions.splice(qNumber, 1);
-    } else if (codingLang === "js") {
-        let qNumber = Math.floor(Math.random() * jsQuestions.length);
-        qDiv.textContent = jsQuestions[qNumber].answer;
-        displayJSQuestion(qNumber);
-        jsQuestions.splice(qNumber, 1);
-    }*/
 
     //Check if the user has completed the quiz and display a congratulations message
     //and clear the quiz area if so.
@@ -169,6 +147,8 @@ function runQuiz(codingLang) {
           qDiv.textContent = sqlQuestions[qNumber].answer;
           let langDiv = document.getElementById('langDiv');
           langDiv.textContent = 'sql'
+          let activeButton = document.getElementById('sql-btn');
+          activeButton.className += 'active';
           displaySQLQuestion(qNumber);
           sqlQuestions.splice(qNumber, 1);
       }
