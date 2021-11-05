@@ -73,7 +73,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     }
-    submitButton.addEventListener('click', checkAnswer);
     runQuiz("sql");
 });
 
@@ -125,6 +124,8 @@ function runQuiz(codingLang) {
     } else {
         let qDiv = document.getElementById('qNumber');
         qDiv.textContent = sqlQuestions[qNumber].answer;
+        let langDiv = document.getElementById('langDiv');
+        langDiv.textContent = 'sql'
         displaySQLQuestion(qNumber);
         sqlQuestions.splice(qNumber, 1);
     }
@@ -152,6 +153,7 @@ function checkAnswer() {
     //Ignore any leading/trailing white spaces and the case of the user's input.
     let userAnswer = document.getElementById('answer-box').value.trim().toUpperCase();
     let correctAnswer = document.getElementById('qNumber').innerHTML;
+    let codingLang = document.getElementById('langDiv').innerHTML;
     if(userAnswer === correctAnswer) {
         correct.play();
         addScore();
@@ -159,7 +161,7 @@ function checkAnswer() {
         incorrect.play();
         addWrong();
     }
-    runQuiz();
+    runQuiz(codingLang);
 }
 
 
