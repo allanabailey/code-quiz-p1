@@ -50,6 +50,49 @@ const sqlQuestions = [
     }
 ];
 
+const htmlQuestions = [
+  {
+    question: "HTMLWhat does the S in SQL stand for?",
+    answer: "STRUCTURED"
+  },
+  {
+    question: "HTMLWhat is the keyword used to select unique/different values?",
+    answer: "DISTINCT"
+  },
+  {
+    question: "HTMLDoes ORDER BY default to ASC or DESC when not specified?",
+    answer: "ASC"
+  },
+  {
+    question: "HTMLWhat is the wildcard used to select all columns from a table?",
+    answer: "*"
+  }, 
+  {
+    question: "HTMLWhat is the keyword used to specify the range of values something can be in?",
+    answer: "BETWEEN"
+  },  
+  {
+    question: "HTMLTrue or False: TRUNCATE TABLE deletes the whole table.",
+    answer: "FALSE"
+  }, 
+  {
+    question: "HTMLWhat is the keyword used to filter records through meeting a certain condition in a SELECT statement?",
+    answer: "WHERE"
+  },
+  {
+    question: "HTMLWhat is the keyword used to search for a particular pattern in a WHERE clause?",
+    answer: "LIKE"
+  },
+  {
+    question: "HTMLWhat key word must go at the end of a CASE statement?",
+    answer: "END"
+  },
+  {
+    question: "HTMLTrue or False: DROP TABLE only deletes the data in the table, not the table itself.",
+    answer: "FALSE"
+  }
+];
+
 
 // Wait for the DOM to completely finish loading
 // before running the game
@@ -88,8 +131,6 @@ function runQuiz(codingLang) {
     document.getElementById('answer-box').focus();
 
     //Randomly choose a question from the array
-    let qNumber = Math.floor(Math.random() * sqlQuestions.length);
-    alert(`${codingLang}`);
     /*if(codingLang === "sql") {
         let qNumber = Math.floor(Math.random() * sqlQuestions.length);
         qDiv.textContent = sqlQuestions[qNumber].answer;
@@ -114,20 +155,38 @@ function runQuiz(codingLang) {
 
     //Check if the user has completed the quiz and display a congratulations message
     //and clear the quiz area if so.
-    
-    if(sqlQuestions.length === 0) {
-        let finishMsg = document.getElementById('question');
-        finishMsg.textContent = "Quiz complete! Refresh the page to try again!";
-        document.getElementById('answer-message').style.display = 'none';
-        document.getElementById('answer-box').style.display = 'none';
-        document.getElementById('submit-button').style.display = 'none';
-    } else {
-        let qDiv = document.getElementById('qNumber');
-        qDiv.textContent = sqlQuestions[qNumber].answer;
-        let langDiv = document.getElementById('langDiv');
-        langDiv.textContent = 'sql'
-        displaySQLQuestion(qNumber);
-        sqlQuestions.splice(qNumber, 1);
+    if(codingLang === "sql") {
+      if(sqlQuestions.length === 0) {
+          let finishMsg = document.getElementById('question');
+          finishMsg.textContent = "Quiz complete! Refresh the page to try again!";
+          document.getElementById('answer-message').style.display = 'none';
+          document.getElementById('answer-box').style.display = 'none';
+          document.getElementById('submit-button').style.display = 'none';
+      } else {
+          let qNumber = Math.floor(Math.random() * sqlQuestions.length);
+          let qDiv = document.getElementById('qNumber');
+          qDiv.textContent = sqlQuestions[qNumber].answer;
+          let langDiv = document.getElementById('langDiv');
+          langDiv.textContent = 'sql'
+          displaySQLQuestion(qNumber);
+          sqlQuestions.splice(qNumber, 1);
+      }
+    } else if(codingLang === "html") {
+      if(htmlQuestions.length === 0) {
+          let finishMsg = document.getElementById('question');
+          finishMsg.textContent = "Quiz complete! Refresh the page to try again!";
+          document.getElementById('answer-message').style.display = 'none';
+          document.getElementById('answer-box').style.display = 'none';
+          document.getElementById('submit-button').style.display = 'none';
+      } else {
+          let qNumber = Math.floor(Math.random() * htmlQuestions.length);
+          let qDiv = document.getElementById('qNumber');
+          qDiv.textContent = htmlQuestions[qNumber].answer;
+          let langDiv = document.getElementById('langDiv');
+          langDiv.textContent = 'html'
+          displayHTMLQuestion(qNumber);
+          htmlQuestions.splice(qNumber, 1);
+      }
     }
 }
 
@@ -141,6 +200,17 @@ function runQuiz(codingLang) {
 function displaySQLQuestion(qNumber) {
     let q = document.getElementById('question');
     q.innerHTML = sqlQuestions[qNumber].question;
+}
+
+/**
+ * Function that displays the next HTML question in the quiz area
+ * by taking qNumber as a parameter and displaying the question
+ * in that index of the array.
+ * @param {*} qNumber 
+ */
+ function displayHTMLQuestion(qNumber) {
+  let q = document.getElementById('question');
+  q.innerHTML = htmlQuestions[qNumber].question;
 }
 
 
