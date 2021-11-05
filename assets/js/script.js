@@ -52,44 +52,44 @@ const sqlQuestions = [
 
 const htmlQuestions = [
   {
-    question: "HTMLWhat does the S in SQL stand for?",
-    answer: "STRUCTURED"
+    question: "What does the M in HTML stand for?",
+    answer: "MARKUP"
   },
   {
-    question: "HTMLWhat is the keyword used to select unique/different values?",
-    answer: "DISTINCT"
+    question: "What is the starting tag of an html document?",
+    answer: "HTML"
   },
   {
-    question: "HTMLDoes ORDER BY default to ASC or DESC when not specified?",
-    answer: "ASC"
+    question: "What is the tag of the first subheading?",
+    answer: "H2"
   },
   {
-    question: "HTMLWhat is the wildcard used to select all columns from a table?",
-    answer: "*"
+    question: "What is the attribute that defines the URL in an anchor tag?",
+    answer: "HREF"
   }, 
   {
-    question: "HTMLWhat is the keyword used to specify the range of values something can be in?",
-    answer: "BETWEEN"
+    question: "What is the tag for creating an unordered list?",
+    answer: "UL"
   },  
   {
-    question: "HTMLTrue or False: TRUNCATE TABLE deletes the whole table.",
-    answer: "FALSE"
+    question: "Is the attribute 'ID' or 'Class' used for unique elements?",
+    answer: "ID"
   }, 
   {
-    question: "HTMLWhat is the keyword used to filter records through meeting a certain condition in a SELECT statement?",
-    answer: "WHERE"
+    question: "What is the tag for images?",
+    answer: "IMG"
   },
   {
-    question: "HTMLWhat is the keyword used to search for a particular pattern in a WHERE clause?",
-    answer: "LIKE"
+    question: "What letter is used to declare a paragraph element?",
+    answer: "P"
   },
   {
-    question: "HTMLWhat key word must go at the end of a CASE statement?",
+    question: "True or False: 'Text' is a valid input type in a form.",
     answer: "END"
   },
   {
-    question: "HTMLTrue or False: DROP TABLE only deletes the data in the table, not the table itself.",
-    answer: "FALSE"
+    question: "What attribute can be used to alter the appearance of elements rather than using CSS?",
+    answer: "STYLE"
   }
 ];
 
@@ -116,6 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     }
+    // Set default game to SQL
     runQuiz("sql");
 });
 
@@ -158,7 +159,7 @@ function runQuiz(codingLang) {
     if(codingLang === "sql") {
       if(sqlQuestions.length === 0) {
           let finishMsg = document.getElementById('question');
-          finishMsg.textContent = "Quiz complete! Refresh the page to try again!";
+          finishMsg.textContent = "Quiz complete! Refresh the page to try again or choose a new one to try!";
           document.getElementById('answer-message').style.display = 'none';
           document.getElementById('answer-box').style.display = 'none';
           document.getElementById('submit-button').style.display = 'none';
