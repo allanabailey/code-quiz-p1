@@ -143,34 +143,38 @@ function runQuiz(codingLang) {
           document.getElementById('submit-button').style.display = 'none';
       } else {
           //If not completed, build and run the SQL quiz.
+          //Choose a random question and store the question number in a hidden div.
           let qNumber = Math.floor(Math.random() * sqlQuestions.length);
           let qDiv = document.getElementById('qNumber');
           qDiv.textContent = sqlQuestions[qNumber].answer;
+          //Store the coding language chosen in a hidden div.
           let langDiv = document.getElementById('langDiv');
           langDiv.textContent = 'sql'
-          let activeButton = document.getElementById('sql-btn');
-          activeButton.className = 'btn active';
+          //Display and build the SQL questions and remove the question and answer from the array.
           displaySQLQuestion(qNumber);
           sqlQuestions.splice(qNumber, 1);
-          activeButton.className = 'btn';
       }
 
       // HTML Quiz
     } else if(codingLang === "html") {
       if(htmlQuestions.length === 0) {
+          //Check if the user has completed the quiz and display a congratulations message
+          //and clear the quiz area if so.
           let finishMsg = document.getElementById('question');
           finishMsg.textContent = "Quiz complete! Refresh the page to try again!";
           document.getElementById('answer-message').style.display = 'none';
           document.getElementById('answer-box').style.display = 'none';
           document.getElementById('submit-button').style.display = 'none';
       } else {
+          //If not completed, build and run the HTML quiz.
+          //Choose a random question and store the question number in a hidden div.
           let qNumber = Math.floor(Math.random() * htmlQuestions.length);
           let qDiv = document.getElementById('qNumber');
           qDiv.textContent = htmlQuestions[qNumber].answer;
+           //Store the coding language chosen in a hidden div.
           let langDiv = document.getElementById('langDiv');
           langDiv.textContent = 'html'
-          let activeButton = document.getElementById('html-btn');
-          activeButton.className = 'btn active';
+          //Display and build the HTML questions and remove the question and answer from the array.
           displayHTMLQuestion(qNumber);
           htmlQuestions.splice(qNumber, 1);
       }
