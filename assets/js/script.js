@@ -136,6 +136,49 @@ const cssQuestions = [
   }
 ];
 
+const jsQuestions = [
+  {
+    question: "True or False: JavaScript accepts both double and single quotes.",
+    answer: "TRUE"
+  },
+  {
+    question: "What is the HTML element that contains javascript code?",
+    answer: "SCRIPT"
+  },
+  {
+    question: "What is the container for storing data called?",
+    answer: "VARIABLE"
+  },
+  {
+    question: "What is the assignment operator?",
+    answer: "="
+  }, 
+  {
+    question: "True or False: JavaScript types are static.",
+    answer: "FALSE"
+  },  
+  {
+    question: "What can be used to store a list of values which can be accessed via an index?",
+    answer: "ARRAY"
+  }, 
+  {
+    question: "What function returns a random number between 0 and 1(exclusive)?",
+    answer: "MATH.RANDOM()"
+  },
+  {
+    question: "What type of loop loops through a block of code a specific number of time?",
+    answer: "FOR"
+  },
+  {
+    question: "What data type only takes the values of 'true' or 'false'?",
+    answer: "BOOLEAN"
+  },
+  {
+    question: "What is the comparison operator for checking that somethin is not equal?",
+    answer: "!="
+  }
+];
+
 // Wait for the DOM to completely finish loading
 // before running the game
 document.addEventListener('DOMContentLoaded', function() {
