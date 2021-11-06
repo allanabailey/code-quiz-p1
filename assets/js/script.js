@@ -182,6 +182,7 @@ const jsQuestions = [
 // Wait for the DOM to completely finish loading
 // before running the game
 document.addEventListener('DOMContentLoaded', function() {
+  
     let buttons = document.getElementsByTagName('button');
 
     //Allow the user to click enter to submit their answer.
@@ -322,6 +323,7 @@ function runQuiz(codingLang) {
  * @param {*} qNumber 
  */
 function displaySQLQuestion(qNumber) {
+
     let q = document.getElementById('question');
     q.innerHTML = sqlQuestions[qNumber].question;
 }
@@ -333,6 +335,7 @@ function displaySQLQuestion(qNumber) {
  * @param {*} qNumber 
  */
  function displayHTMLQuestion(qNumber) {
+
   let q = document.getElementById('question');
   q.innerHTML = htmlQuestions[qNumber].question;
 }
@@ -344,6 +347,7 @@ function displaySQLQuestion(qNumber) {
  * @param {*} qNumber 
  */
  function displayCSSQuestion(qNumber) {
+
   let q = document.getElementById('question');
   q.innerHTML = cssQuestions[qNumber].question;
 }
@@ -355,6 +359,7 @@ function displaySQLQuestion(qNumber) {
  * @param {*} qNumber 
  */
  function displayJSQuestion(qNumber) {
+
   let q = document.getElementById('question');
   q.innerHTML = jsQuestions[qNumber].question;
 }
@@ -384,6 +389,7 @@ function checkAnswer() {
  * Function to increment the users score on getting an answer correct.
  */
 function addScore() {
+
     let currentScore = parseInt(document.getElementById('correct').innerText);
     document.getElementById('correct').innerText = ++currentScore;
 
@@ -400,6 +406,7 @@ function addScore() {
  * Function to increment the 'incorrect' score if the user gets an answer wrong.
  */
 function addWrong() {
+
     let currentWrong = parseInt(document.getElementById('incorrect').innerText);
     document.getElementById('incorrect').innerText = ++currentWrong;
 }
