@@ -287,7 +287,31 @@ function runQuiz(codingLang) {
           displayCSSQuestion(qNumber);
           cssQuestions.splice(qNumber, 1);
       }
-    }
+
+    //JS Quiz
+    } else if(codingLang === "js") {
+      if(jsQuestions.length === 0) {
+          //Check if the user has completed the quiz and display a congratulations message
+          //and clear the quiz area if so.
+          let finishMsg = document.getElementById('question');
+          finishMsg.textContent = "Quiz complete! Refresh the page to try again!";
+          document.getElementById('answer-message').style.display = 'none';
+          document.getElementById('answer-box').style.display = 'none';
+          document.getElementById('submit-button').style.display = 'none';
+      } else {
+          //If not completed, build and run the HTML quiz.
+          //Choose a random question and store the question number in a hidden div.
+          let qNumber = Math.floor(Math.random() * jsQuestions.length);
+          let qDiv = document.getElementById('qNumber');
+          qDiv.textContent = jsQuestions[qNumber].answer;
+           //Store the coding language chosen in a hidden div.
+          let langDiv = document.getElementById('langDiv');
+          langDiv.textContent = 'js'
+          //Display and build the HTML questions and remove the question and answer from the array.
+          displayJSQuestion(qNumber);
+          jsQuestions.splice(qNumber, 1);
+      }
+    } 
 }
 
 
@@ -322,6 +346,17 @@ function displaySQLQuestion(qNumber) {
  function displayCSSQuestion(qNumber) {
   let q = document.getElementById('question');
   q.innerHTML = cssQuestions[qNumber].question;
+}
+
+/**
+ * Function that displays the next JS question in the quiz area
+ * by taking qNumber as a parameter and displaying the question
+ * in that index of the array.
+ * @param {*} qNumber 
+ */
+ function displayJSQuestion(qNumber) {
+  let q = document.getElementById('question');
+  q.innerHTML = jsQuestions[qNumber].question;
 }
 
 /**
