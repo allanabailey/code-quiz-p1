@@ -93,6 +93,48 @@ const htmlQuestions = [
   }
 ];
 
+const cssQuestions = [
+  {
+    question: "What does the C in CSS stand for?",
+    answer: "CASCADING"
+  },
+  {
+    question: "Does .active or #active refer to the element(s) with a class of active?",
+    answer: ".ACTIVE"
+  },
+  {
+    question: "What is the three letter word to describe the #rrggbb colour format?",
+    answer: "HEX"
+  },
+  {
+    question: "What is used to create space around an element outside of its borders?",
+    answer: "MARGIN"
+  }, 
+  {
+    question: "What type of element does not start a new line and only takes up as much space as it needs (e.g span)?",
+    answer: "INLINE"
+  },  
+  {
+    question: "What type of element starts a new line and takes up the full width (e.g div)?",
+    answer: "BLOCK"
+  }, 
+  {
+    question: "Which property specifies what elements can float beside a cleared element?",
+    answer: "CLEAR"
+  },
+  {
+    question: "In the box model, which property clears a space around the content, within the border?",
+    answer: "PADDING"
+  },
+  {
+    question: "What type of class can be used to define a special state of an element (e.g btn:active)?",
+    answer: "PSEUDO"
+  },
+  {
+    question: "What can you set the box-sizing property to ensure that all padding and borders are included in the total size?",
+    answer: "BORDER-BOX"
+  }
+];
 
 // Wait for the DOM to completely finish loading
 // before running the game
@@ -178,6 +220,30 @@ function runQuiz(codingLang) {
           displayHTMLQuestion(qNumber);
           htmlQuestions.splice(qNumber, 1);
       }
+
+    //CSS Quiz
+    } else if(codingLang === "css") {
+      if(cssQuestions.length === 0) {
+          //Check if the user has completed the quiz and display a congratulations message
+          //and clear the quiz area if so.
+          let finishMsg = document.getElementById('question');
+          finishMsg.textContent = "Quiz complete! Refresh the page to try again!";
+          document.getElementById('answer-message').style.display = 'none';
+          document.getElementById('answer-box').style.display = 'none';
+          document.getElementById('submit-button').style.display = 'none';
+      } else {
+          //If not completed, build and run the HTML quiz.
+          //Choose a random question and store the question number in a hidden div.
+          let qNumber = Math.floor(Math.random() * cssQuestions.length);
+          let qDiv = document.getElementById('qNumber');
+          qDiv.textContent = cssQuestions[qNumber].answer;
+           //Store the coding language chosen in a hidden div.
+          let langDiv = document.getElementById('langDiv');
+          langDiv.textContent = 'css'
+          //Display and build the HTML questions and remove the question and answer from the array.
+          displayCSSQuestion(qNumber);
+          cssQuestions.splice(qNumber, 1);
+      }
     }
 }
 
@@ -204,6 +270,16 @@ function displaySQLQuestion(qNumber) {
   q.innerHTML = htmlQuestions[qNumber].question;
 }
 
+/**
+ * Function that displays the next CSS question in the quiz area
+ * by taking qNumber as a parameter and displaying the question
+ * in that index of the array.
+ * @param {*} qNumber 
+ */
+ function displayCSSQuestion(qNumber) {
+  let q = document.getElementById('question');
+  q.innerHTML = cssQuestions[qNumber].question;
+}
 
 /**
  * Function that checks the user's inputted answer against the correct answer
