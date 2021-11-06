@@ -148,7 +148,7 @@ function runQuiz(codingLang) {
           let langDiv = document.getElementById('langDiv');
           langDiv.textContent = 'sql'
           let activeButton = document.getElementById('sql-btn');
-          activeButton.className += 'active';
+          activeButton.className = 'btn active';
           displaySQLQuestion(qNumber);
           sqlQuestions.splice(qNumber, 1);
       }
@@ -165,6 +165,8 @@ function runQuiz(codingLang) {
           qDiv.textContent = htmlQuestions[qNumber].answer;
           let langDiv = document.getElementById('langDiv');
           langDiv.textContent = 'html'
+          let activeButton = document.getElementById('html-btn');
+          activeButton.className = 'btn active';
           displayHTMLQuestion(qNumber);
           htmlQuestions.splice(qNumber, 1);
       }
