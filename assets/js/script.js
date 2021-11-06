@@ -131,17 +131,18 @@ function runQuiz(codingLang) {
     //Place the cursor in the answer box automatically.
     document.getElementById('answer-box').focus();
 
-
-    //Check if the user has completed the quiz and display a congratulations message
-    //and clear the quiz area if so.
+    //SQL
     if(codingLang === "sql") {
       if(sqlQuestions.length === 0) {
+          //Check if the user has completed the quiz and display a congratulations message
+          //and clear the quiz area if so.
           let finishMsg = document.getElementById('question');
           finishMsg.textContent = "Quiz complete! Refresh the page to try again or choose a new one to try!";
           document.getElementById('answer-message').style.display = 'none';
           document.getElementById('answer-box').style.display = 'none';
           document.getElementById('submit-button').style.display = 'none';
       } else {
+          //If not completed, build and run the SQL quiz.
           let qNumber = Math.floor(Math.random() * sqlQuestions.length);
           let qDiv = document.getElementById('qNumber');
           qDiv.textContent = sqlQuestions[qNumber].answer;
@@ -151,7 +152,10 @@ function runQuiz(codingLang) {
           activeButton.className = 'btn active';
           displaySQLQuestion(qNumber);
           sqlQuestions.splice(qNumber, 1);
+          activeButton.className = 'btn';
       }
+
+      // HTML Quiz
     } else if(codingLang === "html") {
       if(htmlQuestions.length === 0) {
           let finishMsg = document.getElementById('question');

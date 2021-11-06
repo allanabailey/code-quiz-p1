@@ -99,7 +99,9 @@ hr {
 }
 
 .active {
-    background-color: green;
+    background-color: white;;
+    border: 2px solid #da4167;
+    color: #170e1a;
 }
 
 #submit-button {
