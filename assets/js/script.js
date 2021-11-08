@@ -163,7 +163,7 @@ const jsQuestions = [
   }, 
   {
     question: "What function returns a random number between 0 and 1(exclusive)?",
-    answer: "MATH.RANDOM()"
+    answer: "MATH.RANDOM"
   },
   {
     question: "What type of loop loops through a block of code a specific number of time?",
@@ -383,11 +383,11 @@ function addScore() {
     let currentScore = parseInt(document.getElementById('correct').innerText);
     document.getElementById('correct').innerText = ++currentScore;
 
-    //If the user has answered 10 questions correctly, turn the background color to green
-    //and display a congratulations message in an alert box.
+    //If the user has answered 10 questions correctly, turn the background color to a 
+    //different shade of blue and display a congratulations message in an alert box.
     if(currentScore == 10) {
         alert('Congratulations you have reached 10 points!');
-        quizContainer.style.backgroundColor = 'green';
+        quizContainer.style.backgroundColor = '#2A4494';
     }
 }
 
