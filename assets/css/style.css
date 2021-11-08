@@ -249,3 +249,16 @@ hr {
         display: none;
     }
 }
+
+/* Media Query for Screens of 420px or less */
+@media (max-width: 420px) {
+    .btn {
+        font-size: 0.8rem;
+    }
+
+    #answer-box {
+        height: 30px;
+        width: 150px;
+        font-size: 1rem;
+    }
+}
