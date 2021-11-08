@@ -238,7 +238,6 @@ function runQuiz(codingLang) {
           //Display and build the SQL questions and remove the question and answer from the array.
           displaySQLQuestion(qNumber);
           sqlQuestions.splice(qNumber, 1);
-          activeButton.className = 'btn'
       }
 
       // HTML Quiz
