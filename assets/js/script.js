@@ -383,11 +383,21 @@ function addScore() {
     let currentScore = parseInt(document.getElementById('correct').innerText);
     document.getElementById('correct').innerText = ++currentScore;
 
-    //If the user has answered 10 questions correctly, turn the background color to a 
-    //different shade of blue and display a congratulations message in an alert box.
+    //Alert the user with congratulations every 10 correct answers.
     if(currentScore == 10) {
         alert('Congratulations you have reached 10 points!');
-        quizContainer.style.backgroundColor = '#2A4494';
+    }
+    if(currentScore == 20) {
+      alert('Congratulations you have reached 20 points!');
+    }
+    if(currentScore == 30) {
+      alert('Congratulations you have reached 30 points!');
+    }
+    //If the user has answered every single question correctly, change the background colour
+    // to a lighter blue and alert them.
+    if(currentScore == 40) {
+      alert('Congratulations you answered every single question correctly!');
+      quizContainer.style.backgroundColor = '#2A4494';
     }
 }
 
