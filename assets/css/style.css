@@ -253,7 +253,7 @@ hr {
 /* Media Query for Screens of 420px or less */
 @media (max-width: 420px) {
     .btn {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     #answer-box {
