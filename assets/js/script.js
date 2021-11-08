@@ -198,6 +198,8 @@ document.addEventListener('DOMContentLoaded', function() {
             checkAnswer();
         } else {
             let codingLang = this.getAttribute("data-type");
+            //makethe background colour white so the user knows which coding languages they have done.
+            this.className += " active";
             runQuiz(codingLang);
         }
     });
@@ -219,14 +221,13 @@ function runQuiz(codingLang) {
 
     //SQL
     if(codingLang === "sql") {
+      // let activeButton = document.getElementById('sql-btn');
+      // activeButton.className = 'btn active'
       if(sqlQuestions.length === 0) {
           //Check if the user has completed the quiz and display a congratulations message
           //and clear the quiz area if so.
           let finishMsg = document.getElementById('question');
           finishMsg.textContent = "Quiz complete! Refresh the page to try again or choose a new one to try!";
-          document.getElementById('answer-message').style.display = 'none';
-          document.getElementById('answer-box').style.display = 'none';
-          document.getElementById('submit-button').style.display = 'none';
       } else {
           //If not completed, build and run the SQL quiz.
           //Choose a random question and store the question number in a hidden div.
@@ -239,6 +240,7 @@ function runQuiz(codingLang) {
           //Display and build the SQL questions and remove the question and answer from the array.
           displaySQLQuestion(qNumber);
           sqlQuestions.splice(qNumber, 1);
+          activeButton.className = 'btn'
       }
 
       // HTML Quiz
@@ -248,9 +250,6 @@ function runQuiz(codingLang) {
           //and clear the quiz area if so.
           let finishMsg = document.getElementById('question');
           finishMsg.textContent = "Quiz complete! Refresh the page to try again!";
-          document.getElementById('answer-message').style.display = 'none';
-          document.getElementById('answer-box').style.display = 'none';
-          document.getElementById('submit-button').style.display = 'none';
       } else {
           //If not completed, build and run the HTML quiz.
           //Choose a random question and store the question number in a hidden div.
@@ -272,9 +271,6 @@ function runQuiz(codingLang) {
           //and clear the quiz area if so.
           let finishMsg = document.getElementById('question');
           finishMsg.textContent = "Quiz complete! Refresh the page to try again!";
-          document.getElementById('answer-message').style.display = 'none';
-          document.getElementById('answer-box').style.display = 'none';
-          document.getElementById('submit-button').style.display = 'none';
       } else {
           //If not completed, build and run the HTML quiz.
           //Choose a random question and store the question number in a hidden div.
@@ -296,9 +292,6 @@ function runQuiz(codingLang) {
           //and clear the quiz area if so.
           let finishMsg = document.getElementById('question');
           finishMsg.textContent = "Quiz complete! Refresh the page to try again!";
-          document.getElementById('answer-message').style.display = 'none';
-          document.getElementById('answer-box').style.display = 'none';
-          document.getElementById('submit-button').style.display = 'none';
       } else {
           //If not completed, build and run the HTML quiz.
           //Choose a random question and store the question number in a hidden div.
