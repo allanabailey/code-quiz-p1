@@ -221,8 +221,6 @@ function runQuiz(codingLang) {
 
     //SQL
     if(codingLang === "sql") {
-      // let activeButton = document.getElementById('sql-btn');
-      // activeButton.className = 'btn active'
       if(sqlQuestions.length === 0) {
           //Check if the user has completed the quiz and display a congratulations message
           //and clear the quiz area if so.

@@ -31,25 +31,25 @@
             <!-- Main game area -->
             <section id="quiz-area">
                 <!-- Quiz Buttons - Coding Language Choices -->
-                <div id="coding-choice">
-                    <button data-type="html" class="btn" id="html-btn">HTML</button>
-                    <button data-type="css" class="btn" id="css-btn">CSS</button>
-                    <button data-type="js" class="btn" id="js-btn">JavaScript</button>
-                    <button data-type="sql" class="btn" id="sql-btn">SQL</button>
+                <div id="coding-choice" aria-label="Menu of buttons for coding language choice">
+                    <button data-type="html" class="btn" id="html-btn" aria-label="HTML quiz button">HTML</button>
+                    <button data-type="css" class="btn" id="css-btn" aria-label="CSS quiz button">CSS</button>
+                    <button data-type="js" class="btn" id="js-btn" aria-label="JavaScript quiz button">JavaScript</button>
+                    <button data-type="sql" class="btn" id="sql-btn" aria-label="SQL quiz button">SQL</button>
                 </div>
                 <!-- Section for Displaying Questions and Text Input -->
                 <div id="quiz-container">
-                    <div id="question-container">
+                    <div id="question-container" aria-label="Question and answer area">
                         <span id="question"></span>
                         <p id="answer-message">Enter Answer:</p>
-                        <input id="answer-box" type="text">
+                        <input id="answer-box" type="text" aria-label="Input box for answer">
                         <div id="langDiv"></div>
                         <div id="qNumber"></div>
                     </div>
-                    <button data-type="submit" id="submit-button" class="btn">Submit Answer</button>
+                    <button data-type="submit" id="submit-button" class="btn" aria-label="Submit button">Submit Answer</button>
                 </div>
                 <!-- Section underneath game area for correct and incorrect score count -->
-                <div id="score-area">
+                <div id="score-area" aria-label="Scores area showing correct and incorrect answers">
                     <p id="scores">
                         <i class="far fa-check-circle fa-2x"></i>
                         <span id="correct-text">Correct Answers</span> <span id="correct">0</span>
