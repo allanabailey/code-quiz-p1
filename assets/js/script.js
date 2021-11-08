@@ -204,8 +204,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     }
-    // Set default game to SQL
-    runQuiz("sql");
+    // Set default game to HTML
+    runQuiz("html");
 });
 
 
