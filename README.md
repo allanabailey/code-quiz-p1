@@ -4,7 +4,7 @@ This project was created as part of Code Institute’s Diploma in Full Stack Sof
 ![Responsive Display Across Devices](image from amiresponsive – file path) 
  
 ### Description 
-
+A website for people to visit who would like to test their knowledge of the basics in four of the main coding languages: HTML, CSS, JavaScript and SQL. It is not designed as a learning tool but rather as a test or quick reminders of some key facts within the languages.  
  
 ### Features 
 
