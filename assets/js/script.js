@@ -219,7 +219,9 @@ function runQuiz(codingLang) {
     //Place the cursor in the answer box automatically.
     document.getElementById('answer-box').focus();
 
+    //Declare the div containing the question to input a congratulations message later
     let finishMsg = document.getElementById('question');
+    //Declare the 2 divs that store the coding language and question number to update below
     let qDiv = document.getElementById('qNumber');
     let langDiv = document.getElementById('langDiv');
 
