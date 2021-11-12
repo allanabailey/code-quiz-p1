@@ -233,13 +233,6 @@ function runQuiz(codingLang) {
     //SQL
     if(codingLang === "sql") {
 
-    console.log('sql ' + sqlQuestions.length);
-    console.log('html ' + htmlQuestions.length);
-
-      htmlButton.disabled = false;
-      cssButton.disabled = false;
-      jsButton.disabled = false;
-
       if(sqlQuestions.length === 0) {
           //Check if the user has completed the quiz and display a congratulations message
           //and clear the quiz area if so.
@@ -258,13 +251,6 @@ function runQuiz(codingLang) {
 
       // HTML Quiz
     } else if(codingLang === "html") {
-
-      console.log('sql ' + sqlQuestions.length);
-    console.log('html ' + htmlQuestions.length);
-
-      cssButton.disabled = false;
-      jsButton.disabled = false;
-      sqlButton.disabled = false;
 
       if(htmlQuestions.length === 0) {
           //Check if the user has completed the quiz and display a congratulations message
@@ -285,10 +271,6 @@ function runQuiz(codingLang) {
     //CSS Quiz
     } else if(codingLang === "css") {
 
-      htmlButton.disabled = false;
-      jsButton.disabled = false;
-      sqlButton.disabled = false;
-
       if(cssQuestions.length === 0) {
           //Check if the user has completed the quiz and display a congratulations message
           //and clear the quiz area if so.
@@ -307,11 +289,7 @@ function runQuiz(codingLang) {
 
     //JS Quiz
     } else if(codingLang === "js") {
-
-      htmlButton.disabled = false;
-      cssButton.disabled = false;
-      sqlButton.disabled = false;
-
+      
       if(jsQuestions.length === 0) {
           //Check if the user has completed the quiz and display a congratulations message
           //and clear the quiz area if so.
