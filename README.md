@@ -21,8 +21,17 @@ Personal Goals
 * Improve my knowledge of different coding languages by devising the questions. 
 * Improve my understanding of JavaScript by using text input comparison, hidden divs to store data and question/answer arrays, all of which are new methods to me. 
 
- 
+## Users
+Users would visit the site to: 
+* Test their knowledge of different coding languages. 
+* Try to improve their knowledge and score for each quiz – add a competitive take on learning coding. 
+* Learn new facts about the different programming languages, perhaps by looking into or researching the correct answers when they get it wrong. 
+  
 ### User Stories 
+* As a user who has recently started learning programming, I would like to test my current knowledge and see if I can improve. 
+* As a new developer, I would like to see if I can improve my score each time until I am sure I know all of the answers by learning new facts. 
+* As a user who hasn’t coded for a long time, I would like to be able to revisit this quiz as a refresher. 
+* As a user who is completely new to coding, I would like to see questions I hadn’t thought of before so that I can go away and research the programming language in a broader context. 
 
  
 Planning and Wireframes / Mockups 
@@ -39,7 +48,6 @@ Image etc
  
 ## Future Implementations 
 
- 
 Technologies Used 
 Text 
  
