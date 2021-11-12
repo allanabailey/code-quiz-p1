@@ -1,6 +1,6 @@
 # Allana Bailey – Code Quiz Project with Code Institute 
 ## Brief Overview 
-This project was created as part of Code Institute’s Diploma in Full Stack Software Development. This is portfolio project 2, a project requiring us to create an interactive web page or application using HTML, CSS and JavaScript. The deployed site can be found [here](https://allanabailey.github.io/code-quiz-p2/).   
+This project was created as part of Code Institute’s Diploma in Full Stack Software Development. This is portfolio project 2, a project requiring us to create an interactive web page or application using HTML, CSS and JavaScript. The deployed site can be found [here](/assets/images/testing-and-wireframes/responsivedesign.png).   
 ![Responsive Display Across Devices](image from amiresponsive – file path) 
  
 ### Description 
@@ -34,10 +34,19 @@ Users would visit the site to:
 * As a user who is completely new to coding, I would like to see questions I hadn’t thought of before so that I can go away and research the programming language in a broader context. 
 
  
-Planning and Wireframes / Mockups 
-Planning Process 
-Text 
-Wireframes 
+## Planning and Wireframes / Mockups 
+  
+### Planning Process 
+I planned this project in line with the 5 planes of the user centric design process in an attempt to ensure scalability, responsiveness, good user experience and an achievable project with the constraints I was faced with. In my previous project scope creep started to become a potential issue so I was more aware of that this time. By rating the important and impact of features, and assigning them development time I was able to identify the features that would be best as future implementations which are detailed below.
+  
+I initially started by thinking about what type of quiz could be beneficial for developers to keep in line with the theme of helpful tools for programmers across my projects. I decided that a quiz would be a useful tool and feature, considering how useful I have found similar learning methods available online myself.
+  
+I then sketched my ideas down on to paper to get a rough idea of the layout the website would have. I used the Code Institute's Love Maths walkthrough project as a guide for this as it was slick, professional and minimalistic which is what I wanted to aim for.
+  
+Once I was happy that my layout was correct and the coding languages were prioritised by course content and starting with the most commonly used programming languages, I then started creating the wireframes as a template and generic structure for my project using Balsamiq.
+  
+
+### Wireframes 
 Text 
 Pictures 
  
