@@ -85,7 +85,7 @@ const htmlQuestions = [
   },
   {
     question: "True or False: 'Text' is a valid input type in a form.",
-    answer: "END"
+    answer: "TRUE"
   },
   {
     question: "What attribute can be used to alter the appearance of elements rather than using CSS?",
@@ -224,6 +224,7 @@ function runQuiz(codingLang) {
     //Declare the 2 divs that store the coding language and question number to update below
     let qDiv = document.getElementById('qNumber');
     let langDiv = document.getElementById('langDiv');
+    let numDiv = document.getElementById('numDiv');
 
     let htmlButton = document.getElementById('html-btn');
     let cssButton = document.getElementById('css-btn');
@@ -233,6 +234,10 @@ function runQuiz(codingLang) {
     //SQL
     if(codingLang === "sql") {
 
+      htmlButton.disabled = false;
+      cssButton.disabled = false;
+      jsButton.disabled = false;
+
       if(sqlQuestions.length === 0) {
           //Check if the user has completed the quiz and display a congratulations message
           //and clear the quiz area if so.
@@ -241,16 +246,21 @@ function runQuiz(codingLang) {
           //If not completed, build and run the SQL quiz.
           //Choose a random question and store the question number in a hidden div.
           let qNumber = Math.floor(Math.random() * sqlQuestions.length);
+          numDiv.textContent = qNumber;
           qDiv.textContent = sqlQuestions[qNumber].answer;
           //Store the coding language chosen in a hidden div.
           langDiv.textContent = 'sql'
           //Display and build the SQL questions and remove the question and answer from the array.
           displaySQLQuestion(qNumber);
-          sqlQuestions.splice(qNumber, 1);
+          //sqlQuestions.splice(qNumber, 1);
       }
 
       // HTML Quiz
     } else if(codingLang === "html") {
+
+      cssButton.disabled = false;
+      jsButton.disabled = false;
+      sqlButton.disabled = false;
 
       if(htmlQuestions.length === 0) {
           //Check if the user has completed the quiz and display a congratulations message
@@ -260,16 +270,21 @@ function runQuiz(codingLang) {
           //If not completed, build and run the HTML quiz.
           //Choose a random question and store the question number in a hidden div.
           let qNumber = Math.floor(Math.random() * htmlQuestions.length);
+          numDiv.textContent = qNumber;
           qDiv.textContent = htmlQuestions[qNumber].answer;
            //Store the coding language chosen in a hidden div.
           langDiv.textContent = 'html'
           //Display and build the HTML questions and remove the question and answer from the array.
           displayHTMLQuestion(qNumber);
-          htmlQuestions.splice(qNumber, 1);
+          //htmlQuestions.splice(qNumber, 1);
       }
 
     //CSS Quiz
     } else if(codingLang === "css") {
+
+      htmlButton.disabled = false;
+      jsButton.disabled = false;
+      sqlButton.disabled = false;
 
       if(cssQuestions.length === 0) {
           //Check if the user has completed the quiz and display a congratulations message
@@ -279,17 +294,22 @@ function runQuiz(codingLang) {
           //If not completed, build and run the CSS quiz.
           //Choose a random question and store the question number in a hidden div.
           let qNumber = Math.floor(Math.random() * cssQuestions.length);
+          numDiv.textContent = qNumber;
           qDiv.textContent = cssQuestions[qNumber].answer;
            //Store the coding language chosen in a hidden div.
           langDiv.textContent = 'css'
           //Display and build the CSS questions and remove the question and answer from the array.
           displayCSSQuestion(qNumber);
-          cssQuestions.splice(qNumber, 1);
+          //cssQuestions.splice(qNumber, 1);
       }
 
     //JS Quiz
     } else if(codingLang === "js") {
-      
+
+      htmlButton.disabled = false;
+      cssButton.disabled = false;
+      sqlButton.disabled = false;
+
       if(jsQuestions.length === 0) {
           //Check if the user has completed the quiz and display a congratulations message
           //and clear the quiz area if so.
@@ -298,12 +318,13 @@ function runQuiz(codingLang) {
           //If not completed, build and run the JS quiz.
           //Choose a random question and store the question number in a hidden div.
           let qNumber = Math.floor(Math.random() * jsQuestions.length);
+          numDiv.textContent = qNumber;
           qDiv.textContent = jsQuestions[qNumber].answer;
            //Store the coding language chosen in a hidden div.
           langDiv.textContent = 'js'
           //Display and build the JS questions and remove the question and answer from the array.
           displayJSQuestion(qNumber);
-          jsQuestions.splice(qNumber, 1);
+          //jsQuestions.splice(qNumber, 1);
       }
     } 
 }
@@ -367,12 +388,22 @@ function checkAnswer() {
     let userAnswer = document.getElementById('answer-box').value.trim().toUpperCase();
     let correctAnswer = document.getElementById('qNumber').innerHTML;
     let codingLang = document.getElementById('langDiv').innerHTML;
+    let numDiv = document.getElementById('numDiv').innerHTML;
     if(userAnswer === correctAnswer) {
         correct.play();
         addScore();
     } else {
         incorrect.play();
         addWrong();
+    }
+    if(codingLang === 'html') {
+      htmlQuestions.splice(numDiv, 1);
+    } else if(codingLang === 'css') {
+      cssQuestions.splice(numDiv, 1);
+    } else if(codingLang === 'js') {
+      jsQuestions.splice(numDiv, 1);
+    } else if(codingLang === 'sql') {
+      sqlQuestions.splice(numDiv, 1);
     }
     runQuiz(codingLang);
 }

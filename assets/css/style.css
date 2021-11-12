@@ -190,6 +190,10 @@ hr {
     display: none;
 }
 
+#numDiv {
+    display: none;
+}
+
 /* Rules Area */
 #rules-container {
     width: 80%;
