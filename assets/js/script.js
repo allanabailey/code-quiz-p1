@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let codingLang = this.getAttribute("data-type");
             //make the background colour white so the user knows which coding languages they have done.
             this.className += " active";
-            //disbale the button to prevent the user from accidentally completing the quiz.
+            //disable the button to prevent the user from accidentally completing the quiz.
             this.disabled = true;
             runQuiz(codingLang);
         }
@@ -225,8 +225,18 @@ function runQuiz(codingLang) {
     let qDiv = document.getElementById('qNumber');
     let langDiv = document.getElementById('langDiv');
 
+    let htmlButton = document.getElementById('html-btn');
+    let cssButton = document.getElementById('css-btn');
+    let jsButton = document.getElementById('js-btn');
+    let sqlButton = document.getElementById('sql-btn');
+
     //SQL
     if(codingLang === "sql") {
+
+      htmlButton.disabled = false;
+      cssButton.disabled = false;
+      jsButton.disabled = false;
+
       if(sqlQuestions.length === 0) {
           //Check if the user has completed the quiz and display a congratulations message
           //and clear the quiz area if so.
@@ -245,6 +255,11 @@ function runQuiz(codingLang) {
 
       // HTML Quiz
     } else if(codingLang === "html") {
+
+      cssButton.disabled = false;
+      jsButton.disabled = false;
+      sqlButton.disabled = false;
+
       if(htmlQuestions.length === 0) {
           //Check if the user has completed the quiz and display a congratulations message
           //and clear the quiz area if so.
@@ -263,6 +278,11 @@ function runQuiz(codingLang) {
 
     //CSS Quiz
     } else if(codingLang === "css") {
+
+      htmlButton.disabled = false;
+      jsButton.disabled = false;
+      sqlButton.disabled = false;
+
       if(cssQuestions.length === 0) {
           //Check if the user has completed the quiz and display a congratulations message
           //and clear the quiz area if so.
@@ -281,6 +301,11 @@ function runQuiz(codingLang) {
 
     //JS Quiz
     } else if(codingLang === "js") {
+
+      htmlButton.disabled = false;
+      cssButton.disabled = false;
+      sqlButton.disabled = false;
+
       if(jsQuestions.length === 0) {
           //Check if the user has completed the quiz and display a congratulations message
           //and clear the quiz area if so.
