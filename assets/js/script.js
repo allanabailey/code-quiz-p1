@@ -200,6 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let codingLang = this.getAttribute("data-type");
             //make the background colour white so the user knows which coding languages they have done.
             this.className += " active";
+            this.disabled = true;
             runQuiz(codingLang);
         }
     });
