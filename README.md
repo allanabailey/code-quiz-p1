@@ -61,10 +61,45 @@ Due to the website being a single page, there was only one wireframe created for
   
 
 ## Features 
-Logo 
-Text  
-Image etc 
- 
+* Logo and Header
+    * A logo and header is **always visible** to the user at the top and center of the screen. I was initially going to change it to be just the logo on smaller screens but thought that the spacing was adequate to keep the full title in place. The logo and header are modified and in line with the overall website **colour scheme**.
+      
+![Logo](/assets/images/features/logowithheader.png)
+  
+* Nav Bar (Standard / Hovered / Clicked)
+    * The nav bar consists of **four buttons** which loads the corresponding quiz for each user. The standard appearance consists of **light blue** buttons which turn a **darker blue with inverted colours** when the user hovers over them. Once a quiz has been **clicked** the button then remains with a **white background** to showcase the quizzes the user has attempted.
+      
+![Standard Nav Bar](/assets/images/features/navbarstandard.png)
+  
+![Hovered Nav Bar](/assets/images/features/navbarhover.png)
+  
+![Clicked Nav Bar](/assets/images/features/navbarclicked.png)
+  
+* Quiz Area
+    * Text text text text text
+      
+![Title](/assets/images/features/path.png)
+  
+* Scores Area
+    * Text text text text text
+      
+![Title](/assets/images/features/path.png)
+    
+* Section Divide
+    * Text text text text text
+      
+![Title](/assets/images/features/path.png)
+  
+* Rules Area
+    * Text text text text text
+      
+![Title](/assets/images/features/path.png)
+  
+* Footer
+    * Text text text text text
+      
+![Title](/assets/images/features/path.png)
+
 ## Future Implementations 
 
 Technologies Used 
