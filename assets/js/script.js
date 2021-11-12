@@ -233,6 +233,9 @@ function runQuiz(codingLang) {
     //SQL
     if(codingLang === "sql") {
 
+    console.log('sql ' + sqlQuestions.length);
+    console.log('html ' + htmlQuestions.length);
+
       htmlButton.disabled = false;
       cssButton.disabled = false;
       jsButton.disabled = false;
@@ -255,6 +258,9 @@ function runQuiz(codingLang) {
 
       // HTML Quiz
     } else if(codingLang === "html") {
+
+      console.log('sql ' + sqlQuestions.length);
+    console.log('html ' + htmlQuestions.length);
 
       cssButton.disabled = false;
       jsButton.disabled = false;
