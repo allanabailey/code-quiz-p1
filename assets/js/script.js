@@ -219,21 +219,22 @@ function runQuiz(codingLang) {
     //Place the cursor in the answer box automatically.
     document.getElementById('answer-box').focus();
 
+    let finishMsg = document.getElementById('question');
+    let qDiv = document.getElementById('qNumber');
+    let langDiv = document.getElementById('langDiv');
+
     //SQL
     if(codingLang === "sql") {
       if(sqlQuestions.length === 0) {
           //Check if the user has completed the quiz and display a congratulations message
           //and clear the quiz area if so.
-          let finishMsg = document.getElementById('question');
           finishMsg.textContent = "Quiz complete! Refresh the page to try again or choose a new one to try!";
       } else {
           //If not completed, build and run the SQL quiz.
           //Choose a random question and store the question number in a hidden div.
           let qNumber = Math.floor(Math.random() * sqlQuestions.length);
-          let qDiv = document.getElementById('qNumber');
           qDiv.textContent = sqlQuestions[qNumber].answer;
           //Store the coding language chosen in a hidden div.
-          let langDiv = document.getElementById('langDiv');
           langDiv.textContent = 'sql'
           //Display and build the SQL questions and remove the question and answer from the array.
           displaySQLQuestion(qNumber);
@@ -245,16 +246,13 @@ function runQuiz(codingLang) {
       if(htmlQuestions.length === 0) {
           //Check if the user has completed the quiz and display a congratulations message
           //and clear the quiz area if so.
-          let finishMsg = document.getElementById('question');
           finishMsg.textContent = "Quiz complete! Refresh the page to try again!";
       } else {
           //If not completed, build and run the HTML quiz.
           //Choose a random question and store the question number in a hidden div.
           let qNumber = Math.floor(Math.random() * htmlQuestions.length);
-          let qDiv = document.getElementById('qNumber');
           qDiv.textContent = htmlQuestions[qNumber].answer;
            //Store the coding language chosen in a hidden div.
-          let langDiv = document.getElementById('langDiv');
           langDiv.textContent = 'html'
           //Display and build the HTML questions and remove the question and answer from the array.
           displayHTMLQuestion(qNumber);
@@ -266,18 +264,15 @@ function runQuiz(codingLang) {
       if(cssQuestions.length === 0) {
           //Check if the user has completed the quiz and display a congratulations message
           //and clear the quiz area if so.
-          let finishMsg = document.getElementById('question');
           finishMsg.textContent = "Quiz complete! Refresh the page to try again!";
       } else {
-          //If not completed, build and run the HTML quiz.
+          //If not completed, build and run the CSS quiz.
           //Choose a random question and store the question number in a hidden div.
           let qNumber = Math.floor(Math.random() * cssQuestions.length);
-          let qDiv = document.getElementById('qNumber');
           qDiv.textContent = cssQuestions[qNumber].answer;
            //Store the coding language chosen in a hidden div.
-          let langDiv = document.getElementById('langDiv');
           langDiv.textContent = 'css'
-          //Display and build the HTML questions and remove the question and answer from the array.
+          //Display and build the CSS questions and remove the question and answer from the array.
           displayCSSQuestion(qNumber);
           cssQuestions.splice(qNumber, 1);
       }
@@ -287,18 +282,15 @@ function runQuiz(codingLang) {
       if(jsQuestions.length === 0) {
           //Check if the user has completed the quiz and display a congratulations message
           //and clear the quiz area if so.
-          let finishMsg = document.getElementById('question');
           finishMsg.textContent = "Quiz complete! Refresh the page to try again!";
       } else {
-          //If not completed, build and run the HTML quiz.
+          //If not completed, build and run the JS quiz.
           //Choose a random question and store the question number in a hidden div.
           let qNumber = Math.floor(Math.random() * jsQuestions.length);
-          let qDiv = document.getElementById('qNumber');
           qDiv.textContent = jsQuestions[qNumber].answer;
            //Store the coding language chosen in a hidden div.
-          let langDiv = document.getElementById('langDiv');
           langDiv.textContent = 'js'
-          //Display and build the HTML questions and remove the question and answer from the array.
+          //Display and build the JS questions and remove the question and answer from the array.
           displayJSQuestion(qNumber);
           jsQuestions.splice(qNumber, 1);
       }
