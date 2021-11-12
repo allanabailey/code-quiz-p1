@@ -252,7 +252,6 @@ function runQuiz(codingLang) {
           langDiv.textContent = 'sql'
           //Display and build the SQL questions and remove the question and answer from the array.
           displaySQLQuestion(qNumber);
-          //sqlQuestions.splice(qNumber, 1);
       }
 
       // HTML Quiz
@@ -276,7 +275,6 @@ function runQuiz(codingLang) {
           langDiv.textContent = 'html'
           //Display and build the HTML questions and remove the question and answer from the array.
           displayHTMLQuestion(qNumber);
-          //htmlQuestions.splice(qNumber, 1);
       }
 
     //CSS Quiz
@@ -300,7 +298,6 @@ function runQuiz(codingLang) {
           langDiv.textContent = 'css'
           //Display and build the CSS questions and remove the question and answer from the array.
           displayCSSQuestion(qNumber);
-          //cssQuestions.splice(qNumber, 1);
       }
 
     //JS Quiz
@@ -324,7 +321,6 @@ function runQuiz(codingLang) {
           langDiv.textContent = 'js'
           //Display and build the JS questions and remove the question and answer from the array.
           displayJSQuestion(qNumber);
-          //jsQuestions.splice(qNumber, 1);
       }
     } 
 }
