@@ -200,14 +200,12 @@ document.addEventListener('DOMContentLoaded', function() {
             let codingLang = this.getAttribute("data-type");
             //make the background colour white so the user knows which coding languages they have done.
             this.className += " active";
-            //disbale the button to prevent user accidentally completing the quiz.
+            //disbale the button to prevent the user from accidentally completing the quiz.
             this.disabled = true;
             runQuiz(codingLang);
         }
     });
     }
-    // Set default game to HTML
-    runQuiz("html");
 });
 
 
