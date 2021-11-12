@@ -174,7 +174,7 @@ const jsQuestions = [
     answer: "BOOLEAN"
   },
   {
-    question: "What is the comparison operator for checking that somethin is not equal?",
+    question: "What is the comparison operator for checking that something is not equal?",
     answer: "!="
   }
 ];
