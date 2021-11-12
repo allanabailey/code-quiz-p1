@@ -10,6 +10,16 @@ A website for people to visit who would like to test their knowledge of the basi
 The website is on a single page with the main title and logo always present at the top of the screen. Beneath this there is the main games area containing the buttons for choices on which coding language the user would like to be tested on, the question and answer area for the quiz, and the submit button. Beneath this is the rules area explaining to the user how to play the game. Followed by this is the footer with default social media links and my name as the author and creator of the site. 
  
 ### Goals 
+Website Goals   
+* Provide a fun and interactive learning method for users. 
+* Allow users to see their scores incrementing and encourage them to improve their scores each time.  
+* Offer quizzes on multiple different coding languages to reach a wider audience of developers. 
+  
+Personal Goals 
+* Create a website as part of my online portfolio. 
+* Create a website which is completely responsive for all screen sizes. 
+* Improve my knowledge of different coding languages by devising the questions. 
+* Improve my understanding of JavaScript by using text input comparison, hidden divs to store data and question/answer arrays, all of which are new methods to me. 
 
  
 ### User Stories 
