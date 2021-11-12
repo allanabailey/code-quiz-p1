@@ -48,10 +48,19 @@ Once I was happy that my layout was correct and the coding languages were priori
   
 
 ### Wireframes 
-Text 
-Pictures 
- 
-Features 
+Due to the website being a single page, there was only one wireframe created for each screen size on Balsamiq.
+  
+#### Desktop
+![Desktop](/assets/images/testing-and-wireframes/desktop.png) 
+   
+#### Tablet
+![Tablet](/assets/images/testing-and-wireframes/tablet.png)
+  
+#### Mobile
+![Mobile](/assets/images/testing-and-wireframes/mobile.png)
+  
+
+## Features 
 Logo 
 Text  
 Image etc 
