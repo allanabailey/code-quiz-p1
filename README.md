@@ -169,11 +169,9 @@ The HTML code was passed through the [W3C Validator](https://validator.w3.org/) 
 * script.js
 ![script.js Validation](/assets/images/testing-and-wireframes/javascriptvalidator.png)
 
-
-Text and images of passing validators. 
-Lighthouse Reports 
-Text 
-Images of each 
+### Lighthouse Report
+There was only a single page for this website and so one lighthouse report was run. The results can be seen in the image below.
+![Lighthouse Report](/assets/images/testing-and-wireframes/lighthousereport.png)
 
  
 Deployment 
