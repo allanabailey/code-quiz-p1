@@ -1,6 +1,4 @@
 const quizContainer = document.getElementById('quiz-container');
-const scoresResults = document.getElementById('score-area');
-const submitButton = document.getElementById('submit-button');
 
 //Audio files to play on getting an answer correct / incorrect.
 const correct = new Audio('assets/audio/correct.mp3');
@@ -192,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    for (button of buttons) {
+    for (var button of buttons) {
       button.addEventListener("click", function() {
         if (this.getAttribute("data-type") === "submit") {
             checkAnswer();
@@ -249,7 +247,7 @@ function runQuiz(codingLang) {
           numDiv.textContent = qNumber;
           qDiv.textContent = sqlQuestions[qNumber].answer;
           //Store the coding language chosen in a hidden div.
-          langDiv.textContent = 'sql'
+          langDiv.textContent = 'sql';
           //Display and build the SQL questions and remove the question and answer from the array.
           displaySQLQuestion(qNumber);
       }
@@ -272,7 +270,7 @@ function runQuiz(codingLang) {
           numDiv.textContent = qNumber;
           qDiv.textContent = htmlQuestions[qNumber].answer;
            //Store the coding language chosen in a hidden div.
-          langDiv.textContent = 'html'
+          langDiv.textContent = 'html';
           //Display and build the HTML questions and remove the question and answer from the array.
           displayHTMLQuestion(qNumber);
       }
@@ -295,7 +293,7 @@ function runQuiz(codingLang) {
           numDiv.textContent = qNumber;
           qDiv.textContent = cssQuestions[qNumber].answer;
            //Store the coding language chosen in a hidden div.
-          langDiv.textContent = 'css'
+          langDiv.textContent = 'css';
           //Display and build the CSS questions and remove the question and answer from the array.
           displayCSSQuestion(qNumber);
       }
@@ -318,7 +316,7 @@ function runQuiz(codingLang) {
           numDiv.textContent = qNumber;
           qDiv.textContent = jsQuestions[qNumber].answer;
            //Store the coding language chosen in a hidden div.
-          langDiv.textContent = 'js'
+          langDiv.textContent = 'js';
           //Display and build the JS questions and remove the question and answer from the array.
           displayJSQuestion(qNumber);
       }
