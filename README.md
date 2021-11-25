@@ -123,6 +123,7 @@ Due to the time constraints of the project, not all features were able to be imp
  
 
 ## Testing 
+### Manual Testing
 A great deal of manual testing took place on this project to ensure that the links, inputs and buttons all worked corectly.
 * Quiz Choices: The different quizzes were clicked on at both the start, and whilst another quiz was ongoing to ensure that the user was able to swap between quizzes and the appropriate questions were shown.
 * Answers: All of the quizzes were answered correctly up to the maximum score of 10 for each quiz. This also allowed me to test the alerts functioned correctly for the score milestones and the change in background colour for a maximum score of 40 points. This ensured that the user would not be marked incorrectly when inputting their answers.
@@ -142,13 +143,24 @@ A great deal of manual testing took place on this project to ensure that the lin
     * To resolve the above, all other buttons were re-enabled when a user clicked on one programming language. This then meant that some of the questions would be repeated due to the buttons being clicked causing the display functions to be caused resulting in only 9 questions being presented to the user.
     * To resolve this, the answers would not be spliced until the answers had been checked to prevent the user from missing out on a question qhen switching programming languages. This was achieved through creating a div that stored the question number that could be passed to the checkAnswer() function, but hidden from the user.
 
+### Responsive Design
+The website was tested on numerous different screen sizes, down to a minimum screen size of 320px as per industry standards. It was important to make the website as responsive as possible from the start with adjustable heights, widths and font-sizes, however some media queries were still required for smaller screen sizes. In the future it would be nice to develop the website from a mobile-first approach once more knowledge and understanding has been gained in this area.
+  
+The responsiveness of the site was tested using the Google Chrome Developer tools to identify the break points. The core devices that the site was checked on were:
+* iPad and iPad Pro
+* Moto G4
+* Galaxy S5
+* iPhone 5/SE
+* iPhone 6/7/8
+* iPhone 6/7/8+
+* iPhone X
+
 Validation 
 Text and images of passing validators. 
 Lighthouse Reports 
 Text 
 Images of each 
-Responsive Design 
-Text and list of device screen sizes tested. 
+
  
 Deployment 
 Text on deployment process 
