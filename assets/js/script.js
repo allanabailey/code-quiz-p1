@@ -390,6 +390,7 @@ function checkAnswer() {
         addScore();
     } else {
         incorrect.play();
+        alert(`Unlucky! You answered: ${userAnswer}. The correct answer was ${correctAnswer}!`);
         addWrong();
     }
     if(codingLang === 'html') {
