@@ -107,29 +107,29 @@ hr {
 #submit-button {
     height: auto;
     padding: 10px;
+    margin-bottom: 20px;
 }
 
 #quiz-container {
     background-color: #122C34;
     width: 80%;
     margin: 0 auto;
-    height: 100vh;
-    max-height: 450px;
     color: white;
     padding: 1%;
     box-sizing: border-box;
 }
 
 #question-container {
-    width: 70%;
+    width: 100%;
     font-size: 2rem;
     margin: auto;
     padding: 50px 0;
     box-sizing: border-box;
 }
 
-#question-container span {
+#question-container h2 {
     padding: 0 15px;
+    font-size: 1.4rem;
 }
 
 
@@ -280,5 +280,9 @@ hr {
 
     #rules-container {
         font-size: 0.8rem;
+    }
+
+    #quiz-container {
+        min-height: 450px;
     }
 }
