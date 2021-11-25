@@ -155,7 +155,21 @@ The responsiveness of the site was tested using the Google Chrome Developer tool
 * iPhone 6/7/8+
 * iPhone X
 
-Validation 
+### Validation
+The three pages: index.html, script.js and style.css were all passed through validators where any warnings or errors were identified and rectified. The final validation results can be seen below for each.
+  
+The HTML code was passed through the [W3C Validator](https://validator.w3.org/) via direct input, the CSS through [W3C JigSaw Validator](https://jigsaw.w3.org/css-validator/) and the JavaScript through [JS Hint](https://jshint.com/)
+
+* index.html
+![index.html Validation](/assets/images/testing-and-wireframes/htmlvalidation.png)
+
+* style.css
+![style.css Validation](/assets/images/testing-and-wireframes/cssvalidator.png)
+
+* script.js
+![script.js Validation](/assets/images/testing-and-wireframes/javascriptvalidator.png)
+
+
 Text and images of passing validators. 
 Lighthouse Reports 
 Text 
