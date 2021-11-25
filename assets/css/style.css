@@ -265,4 +265,16 @@ hr {
         width: 150px;
         font-size: 1rem;
     }
+
+    #question {
+        font-size: 0.8rem;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+
+    .logo {
+        height: 60px;
+    }
 }
