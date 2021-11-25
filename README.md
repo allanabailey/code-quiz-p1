@@ -123,6 +123,15 @@ Due to the time constraints of the project, not all features were able to be imp
  
 
 ## Testing 
+A great deal of manual testing took place on this project to ensure that the links, inputs and buttons all worked corectly.
+* Quiz Choices: The different quizzes were clicked on at both the start, and whilst another quiz was ongoing to ensure that the user was able to swap between quizzes and the appropriate questions were shown.
+* Answers: All of the quizzes were answered correctly up to the maximum score of 10 for each quiz. This also allowed me to test the alerts functioned correctly for the score milestones and the change in background colour for a maximum score of 40 points. This ensured that the user would not be marked incorrectly when inputting their answers.
+* Enter versus Submit button: Questions were answered by both pressing the enter key on the keyboard and clicking the submit button to ensure this correctly called the "checkAnswer()" function either way.
+* Social Media: All of the social media links were clicked to ensure that they directed the user to the correct site corresponding to the icons.
+* Correct / Incorrect Answers: All four quiz types were tested with both correct and incorrect answers to ensure that the correct audio was played and that the corresponding score was incremented accurately.
+
+### Bugs and Fixes
+
 Outline manual testing 
 Bugs and Fixes 
 Text 
