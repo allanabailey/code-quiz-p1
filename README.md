@@ -76,9 +76,9 @@ Due to the website being a single page, there was only one wireframe created for
 ![Clicked Nav Bar](/assets/images/features/navbarclicked.png)
   
 * Quiz Area
-    * Text text text text text
+    * The quiz area displays a responsive, center aligned **question in a white font on a daker background** for good visibility. Beneath this is the **text input box** for the user to write in their answer to the question with a note above instructing the user of its purpose. Whilst the user can **press enter** to submit their question, there is also a **submit button** that can be clicked. When hovered over, the submit button **inverts its colours** matching the three tone colour scheme of the site for consistency.
       
-![Title](/assets/images/features/path.png)
+![Quiz Area](/assets/images/features/quizarea.png)
   
 * Scores Area
     * Text text text text text
