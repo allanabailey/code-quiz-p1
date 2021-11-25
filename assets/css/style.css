@@ -277,4 +277,8 @@ hr {
     .logo {
         height: 60px;
     }
+
+    #rules-container {
+        font-size: 0.8rem;
+    }
 }
