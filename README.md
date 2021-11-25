@@ -81,24 +81,24 @@ Due to the website being a single page, there was only one wireframe created for
 ![Quiz Area](/assets/images/features/quizarea.png)
   
 * Scores Area
-    * Text text text text text
+    * The scores area utilises three main methods of alerting the user to the type of score being incremeneted. An **icon** portraying a tick or cross, the **colours** of red and green, and the **text** beside stating whether it is incorrect or correct. This ensures that it is not reliant on just one design feature such as colour, or images, but utilising many to ensure greater accessibility. On **smaller screens** the words disappear, but their remains the colours and icons to identify the different scores.
       
-![Title](/assets/images/features/path.png)
+![Scores Area](/assets/images/features/scores.png)
     
 * Section Divide
-    * Text text text text text
+    * A simple **horizontal line** was added in between the quiz area and the "how to play" section. This means they are distinct from one another clearly. This provides a **natural pause to the flow of the website** for the user, making it clear they are entering a new section, though still related and on the same page.
       
-![Title](/assets/images/features/path.png)
+![Title](/assets/images/features/sectiondivide.png)
   
 * Rules Area
-    * Text text text text text
+    * The rules area was originally going to be placed at the **top of the page**. However, whilst usually instructions would be beneficial prior to games, quizzes with a text input are self explanatory in their working and I believed it to be more important to have the **quiz as the page hero** near to the programming language choices.
       
-![Title](/assets/images/features/path.png)
+![Title](/assets/images/features/rulesarea.png)
   
 * Footer
-    * Text text text text text
+    * The footer is **fixed to the bottom of the page** and disappears when scrolled out of view to ensure the view for the user is not blocked in any way. It contains the **author's name and date of website creation** as well as **social media links**. These social media links currently link to the standard homepages of their respective icons, however in the future these could link to website fllowings, quiz groups created etc.
       
-![Title](/assets/images/features/path.png)
+![Title](/assets/images/features/footer.png)
 
 ## Future Implementations 
 
