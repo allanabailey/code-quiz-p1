@@ -111,9 +111,18 @@ Due to the time constraints of the project, not all features were able to be imp
 
 
 ## Technologies Used 
-Programming Languages: HTML, CSS, JavaScript
+* Programming Languages: HTML, CSS, JavaScript
+* [GitPod](https://gitpod.io)
+    * GitPod was used as the IDE to develop and write the project and was then pushed to GitHub.
+* [Google Fonts](https://fonts.google.com/)
+    * Google Fonts was used as a way to style and customise the fonts and appearance of the website content.
+* [Font Awesome](https://fontawesome.com/)
+    * Font Awesome was used to add icons to signify the correct and incorrect scores visually.
+* [Paint 3D](https://www.microsoft.com/en-gb/p/paint-3d/9nblggh5fv99?activetab=pivot:overviewtab)
+    * Paint 3D was used to alter the colours of the logo image to match the three tone colour scheme of the website.
  
-Testing 
+
+## Testing 
 Outline manual testing 
 Bugs and Fixes 
 Text 
