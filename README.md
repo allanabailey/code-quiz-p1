@@ -102,8 +102,16 @@ Due to the website being a single page, there was only one wireframe created for
 
 ## Future Implementations 
 
-Technologies Used 
-Text 
+Due to the time constraints of the project, not all features were able to be implemented for its first release, however below are some of the future implementations being considered for development:
+* An ability for the user to **log in** with a username and password and be greeted with their desired username each time.
+* The above would allow for the user to be able to **view their historic scores** and see if there has been an improvement at all.
+* Implement a **public scoreboard** to allow for people to compete and look to gain the highest score in the quickest time.
+* A **timer** that counts down with a choice of 3 speeds for the user.
+* A form allowing users to **submit their own questions** generating a large question bank for a "public" quiz.
+
+
+## Technologies Used 
+Programming Languages: HTML, CSS, JavaScript
  
 Testing 
 Outline manual testing 
