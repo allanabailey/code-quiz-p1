@@ -131,10 +131,17 @@ A great deal of manual testing took place on this project to ensure that the lin
 * Correct / Incorrect Answers: All four quiz types were tested with both correct and incorrect answers to ensure that the correct audio was played and that the corresponding score was incremented accurately.
 
 ### Bugs and Fixes
+* Originally, when you completed one of the quiz questions, all of the submit buttons and text input area would be hidden. This then meant they would not reappear for a new quiz type once these had been added. Whilst it started off as being solely an SQL quiz, when the quiz expanded this feature was not possible to keep as it resulted in the user needing to refresh the page to do a different quiz. To resolve this, the content was no longer hidden and instead a congratulations message was displayed in the question area.
+* On some user testing with family members and friends, a change of colour scheme was said to be required. The original pink text on purple was more difficult to see and not as clean as it could have been. Therefore a change to blues and white was made and user testing was undertaken once again to ensure that it was now more visible and appealing to the eye.
+* Unnecessary sections were removed from the HTML document to improve accessibility for screen readers. Initially they were placed on divs and sections on the footer, however these would not be read and added no accessibility advantages. They came up as an error in validation and have since been removed or adjusted to ensure they are appropriately used.
+* A similar issue with aria-labels occurred whereby they were being used on non-textual content. These were removed to ensure high and accurate accessibility for users. The aria-labels were maintained on navigation buttons, input fields and website sections.
+* Placeholder text as a heading was added to the quiz area to ensure that there was a section heading for the quiz section. This also ensured continuity for when the user clicked on a question which made a question appear, altering the appearance of the page from the starting screen.
+* When the ability to switch quizzes was first implemented, this meant that the user could continuously click one of the quiz buttons until the quiz was complete without scoring any points.
+    * To resolve this, the button for the active quiz was disabled.
+    * This then resulted in the user never being able to return to a quiz once they had switched to another one. For example, they were half way through the HTML quiz, clicked on CSS, and then were never able to return to the HTML quiz to finish it.
+    * To resolve the above, all other buttons were re-enabled when a user clicked on one programming language. This then meant that some of the questions would be repeated due to the buttons being clicked causing the display functions to be caused resulting in only 9 questions being presented to the user.
+    * To resolve this, the answers would not be spliced until the answers had been checked to prevent the user from missing out on a question qhen switching programming languages. This was achieved through creating a div that stored the question number that could be passed to the checkAnswer() function, but hidden from the user.
 
-Outline manual testing 
-Bugs and Fixes 
-Text 
 Validation 
 Text and images of passing validators. 
 Lighthouse Reports 
