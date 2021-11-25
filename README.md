@@ -198,18 +198,18 @@ I would also like to thank **Code Institute** for providing a brilliant course a
 I would like to say a special thank you to **Daisy**, one of the other mentors who helped me understand some of the responsive design and accessibility requirements.
 
 ### Images
-[Pixabay](https://pixabay.com/) - For free images available online to use and the place where I got my logo from.
+[Pixabay](https://pixabay.com/) - For free images available online to use and the place where I got my logo from.  
 [Am I Responsive](http://ami.responsivedesign.is/#) - Creating the image displaying the website preview on all devices at the top of the README.
   
 ### Code
-[Code Institute](https://codeinstitute.net/) - For the 5-Day Coding Challenge and Diploma in Full Stack Software Development which have both been a vital learning resource for HTML, CSS and JavaScripts. Also the use of their full-template for the github repository. Also an incredibly valuable resource on the overall structure of creating a quiz with JavaScript through the Love-Maths project walkthrough. 
-[W3 Schools](https://www.w3schools.com/) - For the lessons and styling suggestions with CSS. Also helped with ideas fo rthe various quiz questions.
-[Stack Overflow](https://stackoverflow.com/questions/37252041/storing-quiz-questions-in-array-of-objects) - Help in creating arrays to store quiz questions and the idea to splice them once answered.
-[Multiwing Span](http://www.multiwingspan.co.uk/javascript.php?page=quiz) - Ideas and suggestions for different methods on checking the users answers for text input based quizzes.
-[Digital Ocean](https://www.digitalocean.com/community/tutorials/css-centering-using-flexbox) - Help with understanding flex box and styling with flex rather than floats.
-[Site Point](https://www.sitepoint.com/simple-javascript-quiz/) - Help with the structure of the JavaScript to create a quiz.
+[Code Institute](https://codeinstitute.net/) - For the 5-Day Coding Challenge and Diploma in Full Stack Software Development which have both been a vital learning resource for HTML, CSS and JavaScripts. Also the use of their full-template for the github repository. Also an incredibly valuable resource on the overall structure of creating a quiz with JavaScript through the Love-Maths project walkthrough.  
+[W3 Schools](https://www.w3schools.com/) - For the lessons and styling suggestions with CSS. Also helped with ideas fo rthe various quiz questions.  
+[Stack Overflow](https://stackoverflow.com/questions/37252041/storing-quiz-questions-in-array-of-objects) - Help in creating arrays to store quiz questions and the idea to splice them once answered.  
+[Multiwing Span](http://www.multiwingspan.co.uk/javascript.php?page=quiz) - Ideas and suggestions for different methods on checking the users answers for text input based quizzes.  
+[Digital Ocean](https://www.digitalocean.com/community/tutorials/css-centering-using-flexbox) - Help with understanding flex box and styling with flex rather than floats.  
+[Site Point](https://www.sitepoint.com/simple-javascript-quiz/) - Help with the structure of the JavaScript to create a quiz.  
 [Developer Drive](https://www.developerdrive.com/sticky-footer-with-flexbox/) - Help with footer styling using flex.
 
 ### Sounds
-[LittleRainySeasons on Free Sound](https://freesound.org/people/LittleRainySeasons/sounds/335908/) - Correct 'ding' sound.
+[LittleRainySeasons on Free Sound](https://freesound.org/people/LittleRainySeasons/sounds/335908/) - Correct 'ding' sound.  
 [Gronkjaer on Free Sound](https://freesound.org/people/Gronkjaer/sounds/554053/) - Incorrect 'buzzer' sound.
