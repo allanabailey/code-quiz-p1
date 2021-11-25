@@ -17,7 +17,7 @@
         <script src="https://kit.fontawesome.com/460c94d067.js" crossorigin="anonymous"></script>
 
         <!-- Favicons -->
-        <link rel="icon" type="image" href="assets/images/favicon.ico"/>
+        <link rel="icon" type="image/png" href="assets/images/favicon.ico"/>
 
         <title>Coding Quiz</title>
     </head>
@@ -34,7 +34,7 @@
             <!-- Main game area -->
             <section id="quiz-area">
                 <!-- Quiz Buttons - Coding Language Choices -->
-                <div id="coding-choice" aria-label="Menu of buttons for coding language choice">
+                <div id="coding-choice">
                     <button data-type="html" class="btn" id="html-btn" aria-label="HTML quiz button">HTML</button>
                     <button data-type="css" class="btn" id="css-btn" aria-label="CSS quiz button">CSS</button>
                     <button data-type="js" class="btn" id="js-btn" aria-label="JavaScript quiz button">JavaScript</button>
@@ -42,7 +42,7 @@
                 </div>
                 <!-- Section for Displaying Questions and Text Input -->
                 <div id="quiz-container">
-                    <div id="question-container" aria-label="Question and answer area">
+                    <div id="question-container">
                         <span id="question"></span>
                         <p id="answer-message">Enter Answer:</p>
                         <input id="answer-box" type="text" aria-label="Input box for answer">
@@ -53,12 +53,12 @@
                     <button data-type="submit" id="submit-button" class="btn" aria-label="Submit button">Submit Answer</button>
                 </div>
                 <!-- Section underneath game area for correct and incorrect score count -->
-                <div id="score-area" aria-label="Scores area showing correct and incorrect answers">
-                    <p id="scores">
+                <div id="score-area">
+                    <p class="scores">
                         <i class="far fa-check-circle fa-2x"></i>
                         <span id="correct-text">Correct Answers</span> <span id="correct">0</span>
                     </p>
-                    <p id="scores">
+                    <p class="scores">
                         <i class="far fa-times-circle fa-2x"></i>
                         <span id="incorrect-text">Incorrect Answers</span> <span id="incorrect">0</span>
                     </p>
@@ -89,29 +89,25 @@
             <br>
         </main>
         <footer>
-            <section id="personal-container">
-                <div id="personal">
-                    <p>
-                        Allana Bailey 2021
-                    </p>
-                </div>
-            </section>
-            <section id="social-container">
-                <ul id="social">
-                    <li>
-                        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Visit our FaceBook page (Opens in a new tab)"><i class="fab fa-facebook"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Visit our Twitter page (Opens in a new tab)"><i class="fab fa-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="Visit our YouTube page (Opens in a new tab)"><i class="fab fa-youtube"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Visit our Instagram page (Opens in a new tab)"><i class="fab fa-instagram"></i></a>
-                    </li>
-                </ul>
-            </section>
+            <div id="personal">
+                <p>
+                    Allana Bailey 2021
+                </p>
+            </div>
+            <ul id="social">
+                <li>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Visit our FaceBook page (Opens in a new tab)"><i class="fab fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Visit our Twitter page (Opens in a new tab)"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="Visit our YouTube page (Opens in a new tab)"><i class="fab fa-youtube"></i></a>
+                </li>
+                <li>
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Visit our Instagram page (Opens in a new tab)"><i class="fab fa-instagram"></i></a>
+                </li>
+            </ul>
         </footer>
         <script src="assets/js/script.js"></script>
     </body>

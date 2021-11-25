@@ -142,7 +142,7 @@ hr {
     justify-content: space-between;
 }
 
-#scores {
+.scores {
     padding: 50px;
 }
 
@@ -234,7 +234,7 @@ hr {
         font-size: 1.2rem;
     }
 
-    #scores {
+    .scores {
         padding: 20px;
     }
 
