@@ -183,6 +183,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let buttons = document.getElementsByTagName('button');
 
+    $("#rules-header").click(function(){
+      $("#rules").slideToggle(1000);
+    });
+
     //Allow the user to click enter to submit their answer.
     document.getElementById('answer-box').addEventListener('keydown', function(event) {
 
