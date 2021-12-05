@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let codingLang = this.getAttribute("data-type");
 
             //make the background colour white so the user knows which coding languages they have done.
-            this.className += " clicked";
+            $(this).addClass("clicked");
             //disable the button to prevent the user from accidentally completing the quiz.
             this.disabled = true;
             runQuiz(codingLang);
@@ -242,13 +242,13 @@ function runQuiz(codingLang) {
     //SQL
     if(codingLang === "sql") {
 
-      sqlButton.addClass('active');
+      $(sqlButton).addClass('active');
       htmlButton.disabled = false;
-      htmlButton.removeClass('active');
+      $(htmlButton).removeClass('active');
       cssButton.disabled = false;
-      cssButton.removeClass('active');
+      $(cssButton).removeClass('active');
       jsButton.disabled = false;
-      jsButton.removeClass('active');
+      $(jsButton).removeClass('active');
 
       if(sqlQuestions.length === 0) {
           //Check if the user has completed the quiz and display a congratulations message
@@ -269,13 +269,13 @@ function runQuiz(codingLang) {
       // HTML Quiz
     } else if(codingLang === "html") {
 
-      htmlButton.addClass('active');
+      $(htmlButton).addClass('active');
       cssButton.disabled = false;
-      cssButton.removeClass('active');
+      $(cssButton).removeClass('active');
       jsButton.disabled = false;
-      jsButton.removeClass('active');
+      $(jsButton).removeClass('active');
       sqlButton.disabled = false;
-      sqlButton.removeClass('active');
+      $(sqlButton).removeClass('active');
 
       if(htmlQuestions.length === 0) {
           //Check if the user has completed the quiz and display a congratulations message
@@ -296,13 +296,13 @@ function runQuiz(codingLang) {
     //CSS Quiz
     } else if(codingLang === "css") {
 
-      cssButton.addClass('active');
+      $(cssButton).addClass('active');
       htmlButton.disabled = false;
-      htmlButton.removeClass('active');
+      $(htmlButton).removeClass('active');
       jsButton.disabled = false;
-      jsButton.removeClass('active');
+      $(jsButton).removeClass('active');
       sqlButton.disabled = false;
-      sqlButton.removeClass('active');
+      $(sqlButton).removeClass('active');
 
       if(cssQuestions.length === 0) {
           //Check if the user has completed the quiz and display a congratulations message
@@ -323,13 +323,13 @@ function runQuiz(codingLang) {
     //JS Quiz
     } else if(codingLang === "js") {
 
-      jsButton.addClass('active');
+      $(jsButton).addClass('active');
       htmlButton.disabled = false;
-      htmlButton.removeClass('active');
+      $(htmlButton).removeClass('active');
       cssButton.disabled = false;
-      cssButton.removeClass('active');
+      $(cssButton).removeClass('active');
       sqlButton.disabled = false;
-      sqlButton.removeClass('active');
+      $(sqlButton).removeClass('active');
 
       if(jsQuestions.length === 0) {
           //Check if the user has completed the quiz and display a congratulations message
