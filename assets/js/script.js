@@ -183,7 +183,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let buttons = document.getElementsByTagName('button');
 
-    $("#rules-header").click(function(){
+    $("#rules-header").click(function(e){
+      e.preventDefault();
       $("#rules").slideToggle(1000);
     });
 

@@ -207,6 +207,7 @@ hr {
 }
 
 #rules {
+    display: none;
     text-align: left;
     padding: 5px;
 }
