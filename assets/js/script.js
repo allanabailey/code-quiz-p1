@@ -194,9 +194,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     for (var button of buttons) {
       button.addEventListener("click", function(event) {
-        let codingLang = this.getAttribute("data-type");
+        //let codingLang = this.getAttribute("data-type");
 
-        if (this.getAttribute("data-type") === "submit" && event.target.value !== '' && codingLang !== null) {
+        if (this.getAttribute("data-type") === "submit") {
             checkAnswer();
         } else {
             let codingLang = this.getAttribute("data-type");
