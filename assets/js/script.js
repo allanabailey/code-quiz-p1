@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     for (var button of buttons) {
-      button.addEventListener("click", function() {
+      button.addEventListener("click", function(event) {
 
         if (this.getAttribute("data-type") === "submit") {
             checkAnswer();
