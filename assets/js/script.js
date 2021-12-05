@@ -180,12 +180,12 @@ const jsQuestions = [
 // Wait for the DOM to completely finish loading
 // before running the game
 document.addEventListener('DOMContentLoaded', function() {
-  
+    let codingLang = this.getAttribute("data-type");
     let buttons = document.getElementsByTagName('button');
 
     //Allow the user to click enter to submit their answer.
     document.getElementById('answer-box').addEventListener('keydown', function(event) {
-        if(event.key === 'Enter') {
+        if(event.key === 'Enter' && event.target.value !== '' && codingLang !== null) {
             checkAnswer();
         }
     });
