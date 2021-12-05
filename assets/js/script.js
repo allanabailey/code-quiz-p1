@@ -180,19 +180,23 @@ const jsQuestions = [
 // Wait for the DOM to completely finish loading
 // before running the game
 document.addEventListener('DOMContentLoaded', function() {
-    let codingLang = this.getAttribute("data-type");
+
     let buttons = document.getElementsByTagName('button');
 
     //Allow the user to click enter to submit their answer.
     document.getElementById('answer-box').addEventListener('keydown', function(event) {
+        let codingLang = this.getAttribute("data-type");
+
         if(event.key === 'Enter' && event.target.value !== '' && codingLang !== null) {
             checkAnswer();
         }
     });
 
     for (var button of buttons) {
-      button.addEventListener("click", function() {
-        if (this.getAttribute("data-type") === "submit") {
+      button.addEventListener("click", function(event) {
+        let codingLang = this.getAttribute("data-type");
+
+        if (this.getAttribute("data-type") === "submit" && event.target.value !== '' && codingLang !== null) {
             checkAnswer();
         } else {
             let codingLang = this.getAttribute("data-type");
