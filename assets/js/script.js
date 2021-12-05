@@ -185,16 +185,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //Allow the user to click enter to submit their answer.
     document.getElementById('answer-box').addEventListener('keydown', function(event) {
-        let codingLang = this.getAttribute("data-type");
 
-        if(event.key === 'Enter' && event.target.value !== '' && codingLang !== null) {
+        if(event.key === 'Enter') {
             checkAnswer();
         }
     });
 
     for (var button of buttons) {
-      button.addEventListener("click", function(event) {
-        //let codingLang = this.getAttribute("data-type");
+      button.addEventListener("click", function() {
 
         if (this.getAttribute("data-type") === "submit") {
             checkAnswer();
