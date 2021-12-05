@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //Allow the user to click enter to submit their answer.
     document.getElementById('answer-box').addEventListener('keydown', function(event) {
 
-        if(event.key === 'Enter') {
+        if(event.key === 'Enter' && event.target.value !== '') {
             checkAnswer();
         }
     });
