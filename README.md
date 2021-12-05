@@ -67,7 +67,7 @@ Due to the website being a single page, there was only one wireframe created for
 ![Logo](/assets/images/features/logowithheader.png)
   
 * Nav Bar (Standard / Hovered / Clicked)
-    * The nav bar consists of **four buttons** which loads the corresponding quiz for each user. The standard appearance consists of **light blue** buttons which turn a **darker blue with inverted colours** when the user hovers over them. Once a quiz has been **clicked** the button then remains with a **white background** to showcase the quizzes the user has attempted.
+    * The nav bar consists of **four buttons** which loads the corresponding quiz for each user. The standard appearance consists of **light blue** buttons which turn a **darker blue with inverted colours** when the user hovers over them. Once a quiz has been **clicked** the button then remains with a **white background** to showcase the quizzes the user has attempted. The **current quiz** that is active has the same display style as a button being hovered over.
       
 ![Standard Nav Bar](/assets/images/features/navbarstandard.png)
   
@@ -91,7 +91,7 @@ Due to the website being a single page, there was only one wireframe created for
 ![Title](/assets/images/features/sectiondivide.png)
   
 * Rules Area
-    * The rules area was originally going to be placed at the **top of the page**. However, whilst usually instructions would be beneficial prior to games, quizzes with a text input are self explanatory in their working and I believed it to be more important to have the **quiz as the page hero** near to the programming language choices.
+    * The rules area was originally going to be placed at the **top of the page**. However, whilst usually instructions would be beneficial prior to games, quizzes with a text input are self explanatory in their working and I believed it to be more important to have the **quiz as the page hero** near to the programming language choices. **JQuery** was utilised to create a **sliding effect** on the rules area so that it does not have to be visible and is the **user's choice**. It is defaulted to being hidden and only appears when clicked.
       
 ![Title](/assets/images/features/rulesarea.png)
   
