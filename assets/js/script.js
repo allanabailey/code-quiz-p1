@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //Allow the user to click enter to submit their answer.
     document.getElementById('answer-box').addEventListener('keydown', function(event) {
 
-        if(event.key === 'Enter' && event.target.value !== '') {
+        if(event.key === 'Enter') {
             checkAnswer();
         }
     });
@@ -409,7 +409,7 @@ function checkAnswer() {
     let correctAnswer = document.getElementById('qNumber').innerHTML;
     let codingLang = document.getElementById('langDiv').innerHTML;
     let numDiv = document.getElementById('numDiv').innerHTML;
-    if(userAnswer === correctAnswer) {
+    if(userAnswer === correctAnswer && userAnswer !== '') {
         correct.play();
         addScore();
     } else {
