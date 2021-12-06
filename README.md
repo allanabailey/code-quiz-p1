@@ -111,7 +111,7 @@ Due to the time constraints of the project, not all features were able to be imp
 
 
 ## Technologies Used 
-* Programming Languages: HTML, CSS, JavaScript
+* Programming Languages: HTML, CSS, JavaScript, JQuery (https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js)
 * [GitPod](https://gitpod.io)
     * GitPod was used as the IDE to develop and write the project and was then pushed to GitHub.
 * [Google Fonts](https://fonts.google.com/)
@@ -142,6 +142,7 @@ A great deal of manual testing took place on this project to ensure that the lin
     * This then resulted in the user never being able to return to a quiz once they had switched to another one. For example, they were half way through the HTML quiz, clicked on CSS, and then were never able to return to the HTML quiz to finish it.
     * To resolve the above, all other buttons were re-enabled when a user clicked on one programming language. This then meant that some of the questions would be repeated due to the buttons being clicked causing the display functions to be caused resulting in only 9 questions being presented to the user.
     * To resolve this, the answers would not be spliced until the answers had been checked to prevent the user from missing out on a question qhen switching programming languages. This was achieved through creating a div that stored the question number that could be passed to the checkAnswer() function, but hidden from the user.
+* The user was able to hit enter or submit on the home screen and increment their correct score when no answer was provided and no question was displayed. This was fixed by adding a condition in the checkAnswer() function that marked any empty user input as incorrect.
 
 ### Responsive Design
 The website was tested on numerous different screen sizes, down to a minimum screen size of 320px as per industry standards. It was important to make the website as responsive as possible from the start with adjustable heights, widths and font-sizes, however some media queries were still required for smaller screen sizes. In the future it would be nice to develop the website from a mobile-first approach once more knowledge and understanding has been gained in this area.
