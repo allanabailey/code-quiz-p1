@@ -21,6 +21,7 @@ Personal Goals
 * Create a website which is completely responsive for all screen sizes. 
 * Improve my knowledge of different coding languages by devising the questions. 
 * Improve my understanding of JavaScript by using text input comparison, hidden divs to store data and question/answer arrays, all of which are new methods to me. 
+* Implement a small amount of JQuery to exapnd my knowledge and use a new technology.
 
 ## Users
 Users would visit the site to: 
